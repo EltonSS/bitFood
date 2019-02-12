@@ -186,8 +186,8 @@
                           <Group type="102" attributes="0">
                               <Component id="btNovoRegistro" min="-2" pref="160" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                              <Component id="btVincularPermissao" min="-2" pref="172" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
+                              <Component id="btVincularPermissao" min="-2" pref="177" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
                               <Component id="txtConsultarRegistro" min="-2" pref="207" max="-2" attributes="0"/>

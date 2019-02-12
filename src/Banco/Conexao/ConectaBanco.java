@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 public class ConectaBanco {
 
     Connection con = null;
-    String banco = "bitFood", host = "localhost:5432", login = "postgres", senha = "root";
+    String banco = "bitfood", host = "localhost:5432", login = "postgres", senha = "bitservice2019";
     private String driver = "org.postgresql.Driver";
     public Connection conn;
     public ResultSet rs;

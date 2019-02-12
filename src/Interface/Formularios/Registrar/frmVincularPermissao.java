@@ -5,9 +5,11 @@ import Banco.Conexao.ConectaBanco;
 import Funcoes.ModeloTabela;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ListSelectionModel;
 
-public class frmVincularPermissao extends javax.swing.JDialog {
+public final class frmVincularPermissao extends javax.swing.JDialog {
 
     crudPermissao crudPrm = new crudPermissao();
     ConectaBanco conBanco = new ConectaBanco();
@@ -382,19 +384,17 @@ public class frmVincularPermissao extends javax.swing.JDialog {
     private void tabelaFormulariosAPermitirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaFormulariosAPermitirMouseClicked
 
         if (evt.getClickCount() > 1) {
-            String mensagem;
             String descForm = "" + tabelaFormulariosAPermitir.getValueAt(tabelaFormulariosAPermitir.getSelectedRow(), 0);
             crudPrm.ConsultarItemPermitido(idPrm, descForm);
-            mensagem = crudPrm.getMensagem();
-            if (mensagem.equals("registro inexistente")) {
-                liberarPermissao();
-            } else {
+            if (descForm.equals(crudPrm.getDescFrm())) {
                 reabilitarPermissao();
+            } else {
+                criarPermissao();
             }
         }
     }//GEN-LAST:event_tabelaFormulariosAPermitirMouseClicked
 
-    public void liberarPermissao() {
+    public void criarPermissao() {
 
         String descForm = "" + tabelaFormulariosAPermitir.getValueAt(tabelaFormulariosAPermitir.getSelectedRow(), 0);
         crudPrm.InserirItemPermissao(idPrm, descForm, "ativo");
@@ -402,7 +402,7 @@ public class frmVincularPermissao extends javax.swing.JDialog {
         atualizaTabelaFormulariosPermitidos();
     }
 
-    public void desabilitarPermissao() {
+    public void desabilitarPermissao() throws SQLException {
 
         String descForm = "" + tabelaFormulariosPermitidos.getValueAt(tabelaFormulariosPermitidos.getSelectedRow(), 0);
         crudPrm.DesabilitarFormularioPermitido(idPrm, descForm);
@@ -420,26 +420,36 @@ public class frmVincularPermissao extends javax.swing.JDialog {
 
     private void btLiberarPermissaoFormularioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLiberarPermissaoFormularioActionPerformed
 
-        String mensagem;
         String descForm = "" + tabelaFormulariosAPermitir.getValueAt(tabelaFormulariosAPermitir.getSelectedRow(), 0);
         crudPrm.ConsultarItemPermitido(idPrm, descForm);
-        mensagem = crudPrm.getMensagem();
-        if (mensagem .equals("registro inexistente")) {
-            liberarPermissao();
-        } else {
+        if (descForm.equals(crudPrm.getDescFrm())) {
             reabilitarPermissao();
+        } else {
+            criarPermissao();
         }
     }//GEN-LAST:event_btLiberarPermissaoFormularioActionPerformed
 
     private void btDesabilitarPermissaoFormularioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDesabilitarPermissaoFormularioActionPerformed
 
-        desabilitarPermissao();
+        try {
+            desabilitarPermissao();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(frmVincularPermissao.class
+                    .getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btDesabilitarPermissaoFormularioActionPerformed
 
     private void tabelaFormulariosPermitidosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaFormulariosPermitidosMouseClicked
 
         if (evt.getClickCount() > 1) {
-            desabilitarPermissao();
+            try {
+                desabilitarPermissao();
+
+            } catch (SQLException ex) {
+                Logger.getLogger(frmVincularPermissao.class
+                        .getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }//GEN-LAST:event_tabelaFormulariosPermitidosMouseClicked
 
