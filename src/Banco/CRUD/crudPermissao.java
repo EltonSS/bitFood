@@ -10,10 +10,10 @@ public class crudPermissao {
     private int idPrm;
     private String descPrm;
     private String statusPrm;
-    private int idItPrm;
+    private int idIPrm;
     private int idFrm;
     private String descFrm;
-    private String statusItPrm;
+    private String statusIPrm;
     private String mensagem;
 
     public int getIdPrm() {
@@ -40,12 +40,12 @@ public class crudPermissao {
         this.statusPrm = statusPrm;
     }
 
-    public int getIdItPrm() {
-        return idItPrm;
+    public int getIdIPrm() {
+        return idIPrm;
     }
 
-    public void setIdItPrm(int idItPrm) {
-        this.idItPrm = idItPrm;
+    public void setIdIPrm(int idIPrm) {
+        this.idIPrm = idIPrm;
     }
 
     public int getIdIFrm() {
@@ -64,12 +64,12 @@ public class crudPermissao {
         this.descFrm = descFrm;
     }
 
-    public String getStatusItPrm() {
-        return statusItPrm;
+    public String getStatusIPrm() {
+        return statusIPrm;
     }
 
-    public void setStatusItPrm(String statusItPrm) {
-        this.statusItPrm = statusItPrm;
+    public void setStatusIPrm(String statusIPrm) {
+        this.statusIPrm = statusIPrm;
     }
 
     public String getMensagem() {
@@ -97,7 +97,7 @@ public class crudPermissao {
         conBanco.desconecta();
     }
 
-    public void InserirItemPermissao(int idPrm, String descFrm, String statusItPrm) {
+    public void InserirItemPermissao(int idPrm, String descFrm, String statusIPrm) {
 
         ConsultarFormularios(descFrm);
         conBanco.conexao();
@@ -105,7 +105,7 @@ public class crudPermissao {
             PreparedStatement pstItemPermissao = (PreparedStatement) conBanco.conn.prepareStatement("insert into tab_itens_permissao (id_prm, id_frm, status_it_prm) values(?,?,?)");
             pstItemPermissao.setInt(1, idPrm);
             pstItemPermissao.setInt(2, idFrm);
-            pstItemPermissao.setString(3, statusItPrm);
+            pstItemPermissao.setString(3, statusIPrm);
             pstItemPermissao.execute();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao tentar inserir a permissao!!\n Erro: " + ex);
@@ -135,7 +135,7 @@ public class crudPermissao {
         try {
             PreparedStatement pstItemPermissao = (PreparedStatement) conBanco.conn.prepareStatement("update tab_itens_permissao set status_it_prm =? where id_it_prm =?");
             pstItemPermissao.setString(1, "não ativo");
-            pstItemPermissao.setInt(2, idItPrm);
+            pstItemPermissao.setInt(2, idIPrm);
             pstItemPermissao.execute();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao tentar desativar a permissão!!\n Erro: " + ex);
@@ -150,7 +150,7 @@ public class crudPermissao {
         try {
             PreparedStatement pstItemPermissao = (PreparedStatement) conBanco.conn.prepareStatement("update tab_itens_permissao set status_it_prm =? where id_it_prm =?");
             pstItemPermissao.setString(1, "ativo");
-            pstItemPermissao.setInt(2, idItPrm);
+            pstItemPermissao.setInt(2, idIPrm);
             pstItemPermissao.execute();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao tentar desativar a permissão!!\n Erro: " + ex);
@@ -208,11 +208,11 @@ public class crudPermissao {
         try {
             conBanco.executaSQL("select * from vw_item_permissao where desc_frm ='" + desc_Frm + "' and id_prm ='" + id_Prm + "'");
             conBanco.rs.first();
-            idItPrm = conBanco.rs.getInt("id_it_prm");
+            idIPrm = conBanco.rs.getInt("id_it_prm");
             descFrm = conBanco.rs.getString("desc_frm");
         } catch (SQLException ex) {
 //            JOptionPane.showMessageDialog(null, "Erro ao tentar consultar o formulario!!\n Erro: " + ex);
-//            mensagem = "registro inexistente";
+            mensagem = "registro inexistente";
         }
         conBanco.desconecta();
     }
