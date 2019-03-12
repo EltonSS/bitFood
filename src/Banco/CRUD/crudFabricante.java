@@ -34,7 +34,7 @@ public class crudFabricante {
             pstFabProd.execute();
             JOptionPane.showMessageDialog(null, "O Fabricante de Produto " + descFabProd + " foi registrado com sucesso!!");
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro ao tentar inserir a unidade de medida!!\n Erro: " + ex);
+            JOptionPane.showMessageDialog(null, "Erro ao tentar inserir o fabricante!!\n Erro: " + ex);
         }
         conBanco.desconecta();
     }

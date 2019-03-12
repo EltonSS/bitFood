@@ -10,48 +10,25 @@ public class pnlCompras extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel6 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel28 = new javax.swing.JLabel();
+        rSButtonMetro5 = new rojerusan.RSButtonMetro();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        rSButtonMetro6 = new rojerusan.RSButtonMetro();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        rSButtonMetro7 = new rojerusan.RSButtonMetro();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        rSButtonMetro8 = new rojerusan.RSButtonMetro();
+        jLabel35 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1380, 480));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel6.setBackground(new java.awt.Color(0, 0, 204));
-        jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Cotação");
-        jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel6.setOpaque(true);
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 170, 30));
-
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Cotação.png"))); // NOI18N
-        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel4.setOpaque(true);
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 170, 130));
-
-        jLabel5.setBackground(new java.awt.Color(153, 153, 153));
-        jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel5.setOpaque(true);
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 170, 20));
 
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
         jLabel1.setText("COMPRAS");
@@ -64,82 +41,144 @@ public class pnlCompras extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1450, Short.MAX_VALUE)
+            .addGap(0, 1313, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 1450, 2));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 1313, 2));
 
-        jLabel8.setBackground(new java.awt.Color(255, 153, 0));
-        jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Compras");
-        jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel8.setOpaque(true);
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, 170, 30));
+        jPanel2.setBackground(new java.awt.Color(0, 2, 61));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1370, 3));
 
-        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Comprar.png"))); // NOI18N
-        jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel9.setOpaque(true);
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 170, 130));
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1313, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 2, Short.MAX_VALUE)
+        );
 
-        jLabel10.setBackground(new java.awt.Color(153, 153, 153));
-        jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel10.setOpaque(true);
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, 170, 20));
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 1313, 2));
 
-        jLabel11.setBackground(new java.awt.Color(153, 153, 153));
-        jLabel11.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel11.setOpaque(true);
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 170, 20));
+        jLabel28.setBackground(new java.awt.Color(15, 74, 145));
+        jLabel28.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel28.setText("Cotação");
+        jLabel28.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel28.setOpaque(true);
+        add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 55, 120, 30));
 
-        jLabel13.setBackground(new java.awt.Color(153, 0, 153));
-        jLabel13.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setText("Recebimento");
-        jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel13.setOpaque(true);
-        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, 170, 30));
+        rSButtonMetro5.setBackground(new java.awt.Color(255, 255, 255));
+        rSButtonMetro5.setForeground(new java.awt.Color(255, 0, 0));
+        rSButtonMetro5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Cotação.png"))); // NOI18N
+        rSButtonMetro5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        rSButtonMetro5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(rSButtonMetro5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 87, 120, 120));
 
-        jLabel16.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel16.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Recebimento.png"))); // NOI18N
-        jLabel16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel16.setOpaque(true);
-        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 170, 130));
+        jLabel29.setBackground(new java.awt.Color(153, 153, 153));
+        jLabel29.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel29.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel29.setOpaque(true);
+        add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 208, 120, 20));
+
+        jLabel30.setBackground(new java.awt.Color(102, 0, 102));
+        jLabel30.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel30.setText("Restaurante");
+        jLabel30.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel30.setOpaque(true);
+        add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 55, 120, 30));
+
+        rSButtonMetro6.setBackground(new java.awt.Color(255, 255, 255));
+        rSButtonMetro6.setForeground(new java.awt.Color(255, 0, 0));
+        rSButtonMetro6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Restaurante.png"))); // NOI18N
+        rSButtonMetro6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        rSButtonMetro6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(rSButtonMetro6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 87, 120, 120));
+
+        jLabel31.setBackground(new java.awt.Color(153, 153, 153));
+        jLabel31.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel31.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel31.setOpaque(true);
+        add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 208, 120, 20));
+
+        jLabel32.setBackground(new java.awt.Color(15, 74, 145));
+        jLabel32.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel32.setText("Compra");
+        jLabel32.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel32.setOpaque(true);
+        add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 55, 120, 30));
+
+        rSButtonMetro7.setBackground(new java.awt.Color(255, 255, 255));
+        rSButtonMetro7.setForeground(new java.awt.Color(255, 0, 0));
+        rSButtonMetro7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Comprar.png"))); // NOI18N
+        rSButtonMetro7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        rSButtonMetro7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(rSButtonMetro7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 87, 120, 120));
+
+        jLabel33.setBackground(new java.awt.Color(153, 153, 153));
+        jLabel33.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel33.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel33.setOpaque(true);
+        add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 208, 120, 20));
+
+        jLabel34.setBackground(new java.awt.Color(15, 74, 145));
+        jLabel34.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel34.setText("Recebimento");
+        jLabel34.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel34.setOpaque(true);
+        add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 55, 120, 30));
+
+        rSButtonMetro8.setBackground(new java.awt.Color(255, 255, 255));
+        rSButtonMetro8.setForeground(new java.awt.Color(255, 0, 0));
+        rSButtonMetro8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Recebimento.png"))); // NOI18N
+        rSButtonMetro8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        rSButtonMetro8.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(rSButtonMetro8, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 87, 120, 120));
+
+        jLabel35.setBackground(new java.awt.Color(153, 153, 153));
+        jLabel35.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel35.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel35.setOpaque(true);
+        add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 208, 120, 20));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private rojerusan.RSButtonMetro rSButtonMetro5;
+    private rojerusan.RSButtonMetro rSButtonMetro6;
+    private rojerusan.RSButtonMetro rSButtonMetro7;
+    private rojerusan.RSButtonMetro rSButtonMetro8;
     // End of variables declaration//GEN-END:variables
 }

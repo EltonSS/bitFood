@@ -78,7 +78,7 @@ public class frmFabricanteRegistrar extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel1.setText("Cadastrar Unidade de Medida");
+        jLabel1.setText("Cadastrar Fabricante");
 
         btSair.setBackground(new java.awt.Color(0, 2, 61));
         btSair.setBorder(null);

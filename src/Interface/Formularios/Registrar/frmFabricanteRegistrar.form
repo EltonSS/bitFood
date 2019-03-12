@@ -159,7 +159,7 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="text" type="java.lang.String" value="Cadastrar Unidade de Medida"/>
+                    <Property name="text" type="java.lang.String" value="Cadastrar Fabricante"/>
                   </Properties>
                 </Component>
                 <Component class="rojeru_san.RSButtonRiple" name="btSair">

@@ -382,14 +382,14 @@ public class frmVincularPermissao extends javax.swing.JDialog {
     private void tabelaFormulariosAPermitirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaFormulariosAPermitirMouseClicked
 
         if (evt.getClickCount() > 1) {
-            String mensagem;
+            String form;
             String descForm = "" + tabelaFormulariosAPermitir.getValueAt(tabelaFormulariosAPermitir.getSelectedRow(), 0);
             crudPrm.ConsultarItemPermitido(idPrm, descForm);
-            mensagem = crudPrm.getMensagem();
-            if (mensagem.equals("registro inexistente")) {
-                liberarPermissao();
-            } else {
+            form = crudPrm.getDescFrm();
+            if (descForm.equals(form)) {
                 reabilitarPermissao();
+            } else {
+                liberarPermissao();
             }
         }
     }//GEN-LAST:event_tabelaFormulariosAPermitirMouseClicked
@@ -420,14 +420,14 @@ public class frmVincularPermissao extends javax.swing.JDialog {
 
     private void btLiberarPermissaoFormularioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLiberarPermissaoFormularioActionPerformed
 
-        String mensagem;
+        String form;
         String descForm = "" + tabelaFormulariosAPermitir.getValueAt(tabelaFormulariosAPermitir.getSelectedRow(), 0);
         crudPrm.ConsultarItemPermitido(idPrm, descForm);
-        mensagem = crudPrm.getMensagem();
-        if (mensagem .equals("registro inexistente")) {
-            liberarPermissao();
-        } else {
+        form = crudPrm.getDescFrm();
+        if (descForm.equals(form)) {
             reabilitarPermissao();
+        } else {
+            liberarPermissao();
         }
     }//GEN-LAST:event_btLiberarPermissaoFormularioActionPerformed
 

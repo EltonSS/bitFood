@@ -12,7 +12,7 @@ import Funcoes.TratamentoCampos;
 import Interface.Formularios.Alterar.FrmUsuarioAlterar;
 import javax.swing.JDialog;
 
-public class frmUsuario extends javax.swing.JDialog {
+public final class frmUsuario extends javax.swing.JDialog {
 
     private final JDialog parente;
     ConectaBanco conBanco = new ConectaBanco();

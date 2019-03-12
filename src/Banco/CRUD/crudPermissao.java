@@ -212,7 +212,7 @@ public class crudPermissao {
             descFrm = conBanco.rs.getString("desc_frm");
         } catch (SQLException ex) {
 //            JOptionPane.showMessageDialog(null, "Erro ao tentar consultar o formulario!!\n Erro: " + ex);
-            mensagem = "registro inexistente";
+//            mensagem = "registro inexistente";
         }
         conBanco.desconecta();
     }

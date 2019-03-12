@@ -39,6 +39,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         lbHora = new rojeru_san.RSLabelHora();
         lbData = new rojeru_san.RSLabelFecha();
         btConsultas = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         panellPrincipal = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -75,8 +76,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Sistema para Restaurante");
-        pnlHead.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 190, 30));
+        jLabel4.setText("Sistema para Controle de Restaurante Versão 1.0");
+        pnlHead.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 340, 30));
 
         btDashboard.setBackground(new java.awt.Color(0, 2, 61));
         btDashboard.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
@@ -262,6 +263,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
             }
         });
         pnlHead.add(btConsultas, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 210, 140, 40));
+
+        jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Sistema para Restaurante");
+        pnlHead.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 190, 30));
 
         getContentPane().add(pnlHead, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -583,6 +589,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel3;
     private rojeru_san.RSLabelFecha lbData;
     private rojeru_san.RSLabelHora lbHora;
