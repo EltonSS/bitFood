@@ -1,27 +1,27 @@
 package Interface.Formularios.Alterar;
 
-import Banco.CRUD.crudFabricante;
+import Banco.CRUD.crudOrigemMercadoria;
 import javax.swing.JOptionPane;
 import Banco.Conexao.ConectaBanco;
-import Interface.Formularios.frmFabricante;
+import Interface.Formularios.frmTributos;
 import java.sql.SQLException;
 import javax.swing.JDialog;
 
-public class FrmOrigemMercadoriaAlterar extends javax.swing.JDialog {
+public final class FrmOrigemMercadoriaAlterar extends javax.swing.JDialog {
 
     private final JDialog parente;
-    crudFabricante crudFabProd = new crudFabricante();
+    crudOrigemMercadoria crudOrigemMercadoria = new crudOrigemMercadoria();
     ConectaBanco conBanco = new ConectaBanco();
-    int xx, yy, id_Fab_Prod;
-    String desc_Fab_Prod, status_Fab_Prod;
+    int xx, yy, id_Org_Merc;
+    String desc_Org_Merc, status_Org_Merc;
 
-    public FrmOrigemMercadoriaAlterar(java.awt.Frame parent, boolean modal, int idFabProd, String descFabProd, String statusFabProd, JDialog p) {
+    public FrmOrigemMercadoriaAlterar(java.awt.Frame parent, boolean modal, int idOrgMerc, String descOrgMerc, String statusOrgMerc, JDialog p) {
 
         super(parent, modal);
         initComponents();
         this.parente = p;
-        txtDescFabricanteProduto.requestFocus();
-        preencherCampos(idFabProd, descFabProd, statusFabProd);
+        txtDescOrigemMercadoria.requestFocus();
+        preencherCampos(idOrgMerc, descOrgMerc, statusOrgMerc);
     }
 
     @SuppressWarnings("unchecked")
@@ -39,7 +39,7 @@ public class FrmOrigemMercadoriaAlterar extends javax.swing.JDialog {
         btAlterarRegistro = new rojeru_san.RSButtonRiple();
         btCancelarRegistro = new rojeru_san.RSButtonRiple();
         chkStatus = new javax.swing.JCheckBox();
-        txtDescFabricanteProduto = new rojerusan.RSMetroTextPlaceHolder();
+        txtDescOrigemMercadoria = new rojerusan.RSMetroTextPlaceHolder();
 
         rSLabelVerticalD1.setText("rSLabelVerticalD1");
 
@@ -79,7 +79,7 @@ public class FrmOrigemMercadoriaAlterar extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel1.setText("Alterar Fabricante de Produto");
+        jLabel1.setText("Alterar Origem Mercadoria");
 
         btSair.setBackground(new java.awt.Color(0, 2, 61));
         btSair.setBorder(null);
@@ -154,15 +154,15 @@ public class FrmOrigemMercadoriaAlterar extends javax.swing.JDialog {
             }
         });
 
-        txtDescFabricanteProduto.setForeground(new java.awt.Color(0, 2, 61));
-        txtDescFabricanteProduto.setToolTipText("Digite a descrição do fabricante");
-        txtDescFabricanteProduto.setBorderColor(new java.awt.Color(0, 2, 61));
-        txtDescFabricanteProduto.setBotonColor(new java.awt.Color(0, 2, 61));
-        txtDescFabricanteProduto.setPhColor(new java.awt.Color(0, 2, 61));
-        txtDescFabricanteProduto.setPlaceholder("Digite a descrição do fabricante");
-        txtDescFabricanteProduto.addActionListener(new java.awt.event.ActionListener() {
+        txtDescOrigemMercadoria.setForeground(new java.awt.Color(0, 2, 61));
+        txtDescOrigemMercadoria.setToolTipText("Digite a descrição da origem da mercadoria");
+        txtDescOrigemMercadoria.setBorderColor(new java.awt.Color(0, 2, 61));
+        txtDescOrigemMercadoria.setBotonColor(new java.awt.Color(0, 2, 61));
+        txtDescOrigemMercadoria.setPhColor(new java.awt.Color(0, 2, 61));
+        txtDescOrigemMercadoria.setPlaceholder("Digite a descrição da origem da mercadoria");
+        txtDescOrigemMercadoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDescFabricanteProdutoActionPerformed(evt);
+                txtDescOrigemMercadoriaActionPerformed(evt);
             }
         });
 
@@ -174,7 +174,7 @@ public class FrmOrigemMercadoriaAlterar extends javax.swing.JDialog {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtDescFabricanteProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDescOrigemMercadoria, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(btAlterarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -189,7 +189,7 @@ public class FrmOrigemMercadoriaAlterar extends javax.swing.JDialog {
                 .addGap(7, 7, 7)
                 .addComponent(chkStatus)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtDescFabricanteProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtDescOrigemMercadoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btAlterarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -197,7 +197,7 @@ public class FrmOrigemMercadoriaAlterar extends javax.swing.JDialog {
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        txtDescFabricanteProduto.getAccessibleContext().setAccessibleName("");
+        txtDescOrigemMercadoria.getAccessibleContext().setAccessibleName("");
 
         rSPanelShadow1.add(jPanel2, java.awt.BorderLayout.CENTER);
 
@@ -209,16 +209,16 @@ public class FrmOrigemMercadoriaAlterar extends javax.swing.JDialog {
 
     public void atualizaTabela() {
 
-        frmFabricante frmFabProd = (frmFabricante) parente;
-        frmFabProd.atualizaTabela();
+        frmTributos frmTributos = (frmTributos) parente;
+        frmTributos.atualizaTabelaOrigemMercadoria();
     }
 
-    public void preencherCampos(int idFabProd, String descFabProd, String statusFabProd) {
+    public void preencherCampos(int idOrgMerc, String descOrgMerc, String statusOrgMerc) {
 
-        id_Fab_Prod = idFabProd;
-        txtDescFabricanteProduto.setText(descFabProd);
-        if (statusFabProd.equals("ativo")) {
-            status_Fab_Prod = statusFabProd;
+        id_Org_Merc = idOrgMerc;
+        txtDescOrigemMercadoria.setText(descOrgMerc);
+        if (statusOrgMerc.equals("ativo")) {
+            status_Org_Merc = statusOrgMerc;
             chkStatus.setSelected(true);
         } else {
             chkStatus.setSelected(false);
@@ -245,10 +245,10 @@ public class FrmOrigemMercadoriaAlterar extends javax.swing.JDialog {
     public void verificarRegistro() {
 
         conBanco.conexao();
-        conBanco.executaSQL("Select * from tab_fabricante_produto where desc_fab_prod ='" + txtDescFabricanteProduto.getText() + "'");
+        conBanco.executaSQL("Select * from tab_origem_mercadoria where desc_org_merc ='" + txtDescOrigemMercadoria.getText() + "'");
         try {
             conBanco.rs.first();
-            desc_Fab_Prod = conBanco.rs.getString("desc_fab_prod");
+            desc_Org_Merc = conBanco.rs.getString("desc_org_merc");
         } catch (SQLException ex) {
         }
         conBanco.desconecta();
@@ -256,16 +256,16 @@ public class FrmOrigemMercadoriaAlterar extends javax.swing.JDialog {
 
     public void atualizarRegistro() {
 
-        if (txtDescFabricanteProduto.getText().equals("")) {
-            JOptionPane.showMessageDialog(rootPane, "Digite a descrição do fabricante!!");
-            txtDescFabricanteProduto.requestFocus();
+        if (txtDescOrigemMercadoria.getText().equals("")) {
+            JOptionPane.showMessageDialog(rootPane, "Digite a descrição da origem da mercadoria!!");
+            txtDescOrigemMercadoria.requestFocus();
         } else {
             verificarRegistro();
-            if (txtDescFabricanteProduto.getText().equals((String) desc_Fab_Prod)) {
+            if (txtDescOrigemMercadoria.getText().equals((String) desc_Org_Merc)) {
                 JOptionPane.showMessageDialog(rootPane, "Não é possível realizar essa alteração pois já existe esse nome registrado no sistema!!");
-            txtDescFabricanteProduto.requestFocus();
+                txtDescOrigemMercadoria.requestFocus();
             } else {
-                crudFabProd.AlterarFabricanteProduto(id_Fab_Prod, txtDescFabricanteProduto.getText(), status_Fab_Prod);
+                crudOrigemMercadoria.AlterarOrigemMercadoria(id_Org_Merc, txtDescOrigemMercadoria.getText(), status_Org_Merc);
                 atualizaTabela();
                 dispose();
             }
@@ -298,16 +298,16 @@ public class FrmOrigemMercadoriaAlterar extends javax.swing.JDialog {
     private void chkStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkStatusActionPerformed
 
         if (!chkStatus.isSelected()) {
-            status_Fab_Prod = "não ativo";
+            status_Org_Merc = "não ativo";
         } else {
-            status_Fab_Prod = "ativo";
+            status_Org_Merc = "ativo";
         }
     }//GEN-LAST:event_chkStatusActionPerformed
 
-    private void txtDescFabricanteProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescFabricanteProdutoActionPerformed
+    private void txtDescOrigemMercadoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescOrigemMercadoriaActionPerformed
 
         atualizarRegistro();
-    }//GEN-LAST:event_txtDescFabricanteProdutoActionPerformed
+    }//GEN-LAST:event_txtDescOrigemMercadoriaActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private rojeru_san.RSButtonRiple btAlterarRegistro;
@@ -321,6 +321,6 @@ public class FrmOrigemMercadoriaAlterar extends javax.swing.JDialog {
     private rojerusan.RSLabelVerticalD rSLabelVerticalD1;
     private rojerusan.RSLabelVerticalD rSLabelVerticalD2;
     private rojeru_san.RSPanelShadow rSPanelShadow1;
-    private rojerusan.RSMetroTextPlaceHolder txtDescFabricanteProduto;
+    private rojerusan.RSMetroTextPlaceHolder txtDescOrigemMercadoria;
     // End of variables declaration//GEN-END:variables
 }

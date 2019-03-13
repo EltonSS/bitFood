@@ -1,21 +1,33 @@
 package Interface.Formularios;
 
-import Interface.Formularios.Registrar.frmCestRegistrar;
-import Interface.Formularios.Registrar.frmOrigemMercadoriaRegistrar;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
 import Banco.Conexao.ConectaBanco;
 import Banco.CRUD.crudCest;
+import Banco.CRUD.crudOrigemMercadoria;
+import Banco.CRUD.crudCst;
+import Banco.CRUD.crudCsosn;
+import Banco.CRUD.crudCrt;
+import Banco.CRUD.crudBcIcms;
+import Banco.CRUD.crudBcIcmsSt;
 import Funcoes.ModeloTabela;
 import Funcoes.TratamentoCampos;
 import Interface.Formularios.Alterar.FrmCestAlterar;
-import Interface.Formularios.Registrar.frmBcIcmsRegistrar;
-import Interface.Formularios.Registrar.frmBcIcmsStRegistrar;
+import Interface.Formularios.Alterar.FrmCrtAlterar;
+import Interface.Formularios.Alterar.FrmCstAlterar;
+import Interface.Formularios.Alterar.FrmOrigemMercadoriaAlterar;
+import Interface.Formularios.Alterar.FrmCsosnAlterar;
+import Interface.Formularios.Alterar.FrmBcIcmsAlterar;
+import Interface.Formularios.Alterar.FrmBcIcmsStAlterar;
+import Interface.Formularios.Registrar.frmCestRegistrar;
+import Interface.Formularios.Registrar.frmOrigemMercadoriaRegistrar;
 import Interface.Formularios.Registrar.frmCrtRegistrar;
 import Interface.Formularios.Registrar.frmCsosnRegistrar;
 import Interface.Formularios.Registrar.frmCstRegistrar;
+import Interface.Formularios.Registrar.frmBcIcmsRegistrar;
+import Interface.Formularios.Registrar.frmBcIcmsStRegistrar;
 import javax.swing.JDialog;
 import rojerusan.RSTableMetro;
 
@@ -24,9 +36,16 @@ public final class frmTributos extends javax.swing.JDialog {
     private final JDialog parente;
     ConectaBanco conBanco = new ConectaBanco();
     crudCest crudCest = new crudCest();
+    crudOrigemMercadoria crudOrigemMercadoria = new crudOrigemMercadoria();
+    crudCsosn crudCsosn = new crudCsosn();
+    crudCst crudCst = new crudCst();
+    crudCrt crudCrt = new crudCrt();
+    crudBcIcms crudBcIcms = new crudBcIcms();
+    crudBcIcmsSt crudBcIcmsSt = new crudBcIcmsSt();
     TratamentoCampos tratCampo = new TratamentoCampos();
-    int xx, yy, num = 1, id_Cest, id_Org_Merc;
-    String desc_Cest, desc_Org_Merc, status_Cest, status_Org_Merc;
+    int xx, yy, num = 1, id_Cest, id_Org_Merc, id_Cst, id_Csosn, id_Crt, id_Bc_Icms, id_Bc_Icms_St;
+    String num_Cest, desc_Org_Merc, desc_Cst, desc_Csosn, desc_Crt, desc_Bc_Icms, desc_Bc_Icms_St;
+    String status_Cest, status_Org_Merc, status_Cst, status_Csosn, status_Crt, status_Bc_Icms, status_Bc_Icms_St;
 
     public frmTributos(java.awt.Frame parent, boolean modal, JDialog p) {
 
@@ -58,32 +77,32 @@ public final class frmTributos extends javax.swing.JDialog {
         jTabbedPaneAbas = new javax.swing.JTabbedPane();
         menuTabelaRegistroCest = new javax.swing.JPanel();
         btDeletarRegistro = new rojeru_san.RSButtonRiple();
-        btEditarRegistro = new rojeru_san.RSButtonRiple();
+        btEditarRegistroCest = new rojeru_san.RSButtonRiple();
         btInserirRegistroNcm = new rojeru_san.RSButtonRiple();
         popupMenuRegistroCest = new javax.swing.JPopupMenu();
         menuTabelaRegistroOrigemMercadoria = new javax.swing.JPanel();
         btDeletarRegistro1 = new rojeru_san.RSButtonRiple();
-        btEditarRegistro1 = new rojeru_san.RSButtonRiple();
+        btEditarRegistroOrigemMercadoria = new rojeru_san.RSButtonRiple();
         popupMenuRegistroOrigemMercadoria = new javax.swing.JPopupMenu();
         menuTabelaRegistroCst = new javax.swing.JPanel();
         btDeletarRegistro2 = new rojeru_san.RSButtonRiple();
-        btEditarRegistro2 = new rojeru_san.RSButtonRiple();
+        btEditarRegistroCst = new rojeru_san.RSButtonRiple();
         popupMenuRegistroCst = new javax.swing.JPopupMenu();
         menuTabelaRegistroCsosn = new javax.swing.JPanel();
         btDeletarRegistro3 = new rojeru_san.RSButtonRiple();
-        btEditarRegistro3 = new rojeru_san.RSButtonRiple();
+        btEditarRegistroCsosn = new rojeru_san.RSButtonRiple();
         popupMenuRegistroCsosn = new javax.swing.JPopupMenu();
         menuTabelaRegistroCrt = new javax.swing.JPanel();
         btDeletarRegistro4 = new rojeru_san.RSButtonRiple();
-        btEditarRegistro4 = new rojeru_san.RSButtonRiple();
+        btEditarRegistroCrt = new rojeru_san.RSButtonRiple();
         popupMenuRegistroCrt = new javax.swing.JPopupMenu();
         menuTabelaRegistroIcms = new javax.swing.JPanel();
         btDeletarRegistro5 = new rojeru_san.RSButtonRiple();
-        btEditarRegistro5 = new rojeru_san.RSButtonRiple();
+        btEditarRegistroBcIcms = new rojeru_san.RSButtonRiple();
         popupMenuRegistroIcms = new javax.swing.JPopupMenu();
         menuTabelaRegistroIcmsSt = new javax.swing.JPanel();
         btDeletarRegistro6 = new rojeru_san.RSButtonRiple();
-        btEditarRegistro6 = new rojeru_san.RSButtonRiple();
+        btEditarRegistroBcIcmsSt = new rojeru_san.RSButtonRiple();
         popupMenuRegistroIcmsSt = new javax.swing.JPopupMenu();
         rSPanelShadow1 = new rojeru_san.RSPanelShadow();
         jPanel2 = new javax.swing.JPanel();
@@ -127,13 +146,13 @@ public final class frmTributos extends javax.swing.JDialog {
         jLabel8 = new javax.swing.JLabel();
         txtConsultarRegistroBcIcms = new rojerusan.RSMetroTextPlaceHolder();
         jScrollPane6 = new javax.swing.JScrollPane();
-        tabelaIcms = new rojerusan.RSTableMetro();
+        tabelaBcIcms = new rojerusan.RSTableMetro();
         abaBcIcmsSt = new javax.swing.JPanel();
         btNovoRegistroBcIcmsSt = new rojeru_san.RSButtonRiple();
         jLabel9 = new javax.swing.JLabel();
         txtConsultarRegistroBcIcmsSt = new rojerusan.RSMetroTextPlaceHolder();
         jScrollPane7 = new javax.swing.JScrollPane();
-        tabelaIcmsSt = new rojerusan.RSTableMetro();
+        tabelaBcIcmsSt = new rojerusan.RSTableMetro();
         abaBcIcmsSt1 = new javax.swing.JPanel();
         btNovoRegistroBcIcmsSt1 = new rojeru_san.RSButtonRiple();
         jLabel10 = new javax.swing.JLabel();
@@ -172,21 +191,21 @@ public final class frmTributos extends javax.swing.JDialog {
         });
         menuTabelaRegistroCest.add(btDeletarRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 180, -1));
 
-        btEditarRegistro.setBackground(new java.awt.Color(0, 2, 61));
-        btEditarRegistro.setBorder(null);
-        btEditarRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/BotoesFormularios/Editar Registro.png"))); // NOI18N
-        btEditarRegistro.setText("Editar CEST");
-        btEditarRegistro.setToolTipText("Novo Registro");
-        btEditarRegistro.setColorHover(new java.awt.Color(1, 6, 167));
-        btEditarRegistro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btEditarRegistro.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btEditarRegistro.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btEditarRegistro.addActionListener(new java.awt.event.ActionListener() {
+        btEditarRegistroCest.setBackground(new java.awt.Color(0, 2, 61));
+        btEditarRegistroCest.setBorder(null);
+        btEditarRegistroCest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/BotoesFormularios/Editar Registro.png"))); // NOI18N
+        btEditarRegistroCest.setText("Editar CEST");
+        btEditarRegistroCest.setToolTipText("Novo Registro");
+        btEditarRegistroCest.setColorHover(new java.awt.Color(1, 6, 167));
+        btEditarRegistroCest.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btEditarRegistroCest.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btEditarRegistroCest.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btEditarRegistroCest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btEditarRegistroActionPerformed(evt);
+                btEditarRegistroCestActionPerformed(evt);
             }
         });
-        menuTabelaRegistroCest.add(btEditarRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 180, -1));
+        menuTabelaRegistroCest.add(btEditarRegistroCest, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 180, -1));
 
         btInserirRegistroNcm.setBackground(new java.awt.Color(0, 2, 61));
         btInserirRegistroNcm.setBorder(null);
@@ -221,23 +240,23 @@ public final class frmTributos extends javax.swing.JDialog {
                 btDeletarRegistro1ActionPerformed(evt);
             }
         });
-        menuTabelaRegistroOrigemMercadoria.add(btDeletarRegistro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 180, -1));
+        menuTabelaRegistroOrigemMercadoria.add(btDeletarRegistro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 220, -1));
 
-        btEditarRegistro1.setBackground(new java.awt.Color(0, 2, 61));
-        btEditarRegistro1.setBorder(null);
-        btEditarRegistro1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/BotoesFormularios/Editar Registro.png"))); // NOI18N
-        btEditarRegistro1.setText("Editar Registro");
-        btEditarRegistro1.setToolTipText("Novo Registro");
-        btEditarRegistro1.setColorHover(new java.awt.Color(1, 6, 167));
-        btEditarRegistro1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btEditarRegistro1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btEditarRegistro1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btEditarRegistro1.addActionListener(new java.awt.event.ActionListener() {
+        btEditarRegistroOrigemMercadoria.setBackground(new java.awt.Color(0, 2, 61));
+        btEditarRegistroOrigemMercadoria.setBorder(null);
+        btEditarRegistroOrigemMercadoria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/BotoesFormularios/Editar Registro.png"))); // NOI18N
+        btEditarRegistroOrigemMercadoria.setText("Editar Orgiem Mercadoria");
+        btEditarRegistroOrigemMercadoria.setToolTipText("Novo Registro");
+        btEditarRegistroOrigemMercadoria.setColorHover(new java.awt.Color(1, 6, 167));
+        btEditarRegistroOrigemMercadoria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btEditarRegistroOrigemMercadoria.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btEditarRegistroOrigemMercadoria.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btEditarRegistroOrigemMercadoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btEditarRegistro1ActionPerformed(evt);
+                btEditarRegistroOrigemMercadoriaActionPerformed(evt);
             }
         });
-        menuTabelaRegistroOrigemMercadoria.add(btEditarRegistro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, -1));
+        menuTabelaRegistroOrigemMercadoria.add(btEditarRegistroOrigemMercadoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, -1));
 
         menuTabelaRegistroCst.setBackground(new java.awt.Color(255, 255, 255));
         menuTabelaRegistroCst.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -258,21 +277,21 @@ public final class frmTributos extends javax.swing.JDialog {
         });
         menuTabelaRegistroCst.add(btDeletarRegistro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 180, -1));
 
-        btEditarRegistro2.setBackground(new java.awt.Color(0, 2, 61));
-        btEditarRegistro2.setBorder(null);
-        btEditarRegistro2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/BotoesFormularios/Editar Registro.png"))); // NOI18N
-        btEditarRegistro2.setText("Editar Registro");
-        btEditarRegistro2.setToolTipText("Novo Registro");
-        btEditarRegistro2.setColorHover(new java.awt.Color(1, 6, 167));
-        btEditarRegistro2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btEditarRegistro2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btEditarRegistro2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btEditarRegistro2.addActionListener(new java.awt.event.ActionListener() {
+        btEditarRegistroCst.setBackground(new java.awt.Color(0, 2, 61));
+        btEditarRegistroCst.setBorder(null);
+        btEditarRegistroCst.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/BotoesFormularios/Editar Registro.png"))); // NOI18N
+        btEditarRegistroCst.setText("Editar CST");
+        btEditarRegistroCst.setToolTipText("Novo Registro");
+        btEditarRegistroCst.setColorHover(new java.awt.Color(1, 6, 167));
+        btEditarRegistroCst.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btEditarRegistroCst.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btEditarRegistroCst.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btEditarRegistroCst.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btEditarRegistro2ActionPerformed(evt);
+                btEditarRegistroCstActionPerformed(evt);
             }
         });
-        menuTabelaRegistroCst.add(btEditarRegistro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, -1));
+        menuTabelaRegistroCst.add(btEditarRegistroCst, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, -1));
 
         menuTabelaRegistroCsosn.setBackground(new java.awt.Color(255, 255, 255));
         menuTabelaRegistroCsosn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -293,21 +312,21 @@ public final class frmTributos extends javax.swing.JDialog {
         });
         menuTabelaRegistroCsosn.add(btDeletarRegistro3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 180, -1));
 
-        btEditarRegistro3.setBackground(new java.awt.Color(0, 2, 61));
-        btEditarRegistro3.setBorder(null);
-        btEditarRegistro3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/BotoesFormularios/Editar Registro.png"))); // NOI18N
-        btEditarRegistro3.setText("Editar Registro");
-        btEditarRegistro3.setToolTipText("Novo Registro");
-        btEditarRegistro3.setColorHover(new java.awt.Color(1, 6, 167));
-        btEditarRegistro3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btEditarRegistro3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btEditarRegistro3.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btEditarRegistro3.addActionListener(new java.awt.event.ActionListener() {
+        btEditarRegistroCsosn.setBackground(new java.awt.Color(0, 2, 61));
+        btEditarRegistroCsosn.setBorder(null);
+        btEditarRegistroCsosn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/BotoesFormularios/Editar Registro.png"))); // NOI18N
+        btEditarRegistroCsosn.setText("Editar CSOSN");
+        btEditarRegistroCsosn.setToolTipText("Novo Registro");
+        btEditarRegistroCsosn.setColorHover(new java.awt.Color(1, 6, 167));
+        btEditarRegistroCsosn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btEditarRegistroCsosn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btEditarRegistroCsosn.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btEditarRegistroCsosn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btEditarRegistro3ActionPerformed(evt);
+                btEditarRegistroCsosnActionPerformed(evt);
             }
         });
-        menuTabelaRegistroCsosn.add(btEditarRegistro3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, -1));
+        menuTabelaRegistroCsosn.add(btEditarRegistroCsosn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, -1));
 
         menuTabelaRegistroCrt.setBackground(new java.awt.Color(255, 255, 255));
         menuTabelaRegistroCrt.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -328,21 +347,21 @@ public final class frmTributos extends javax.swing.JDialog {
         });
         menuTabelaRegistroCrt.add(btDeletarRegistro4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 180, -1));
 
-        btEditarRegistro4.setBackground(new java.awt.Color(0, 2, 61));
-        btEditarRegistro4.setBorder(null);
-        btEditarRegistro4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/BotoesFormularios/Editar Registro.png"))); // NOI18N
-        btEditarRegistro4.setText("Editar Registro");
-        btEditarRegistro4.setToolTipText("Novo Registro");
-        btEditarRegistro4.setColorHover(new java.awt.Color(1, 6, 167));
-        btEditarRegistro4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btEditarRegistro4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btEditarRegistro4.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btEditarRegistro4.addActionListener(new java.awt.event.ActionListener() {
+        btEditarRegistroCrt.setBackground(new java.awt.Color(0, 2, 61));
+        btEditarRegistroCrt.setBorder(null);
+        btEditarRegistroCrt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/BotoesFormularios/Editar Registro.png"))); // NOI18N
+        btEditarRegistroCrt.setText("Editar CRT");
+        btEditarRegistroCrt.setToolTipText("Novo Registro");
+        btEditarRegistroCrt.setColorHover(new java.awt.Color(1, 6, 167));
+        btEditarRegistroCrt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btEditarRegistroCrt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btEditarRegistroCrt.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btEditarRegistroCrt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btEditarRegistro4ActionPerformed(evt);
+                btEditarRegistroCrtActionPerformed(evt);
             }
         });
-        menuTabelaRegistroCrt.add(btEditarRegistro4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, -1));
+        menuTabelaRegistroCrt.add(btEditarRegistroCrt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, -1));
 
         menuTabelaRegistroIcms.setBackground(new java.awt.Color(255, 255, 255));
         menuTabelaRegistroIcms.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -363,21 +382,21 @@ public final class frmTributos extends javax.swing.JDialog {
         });
         menuTabelaRegistroIcms.add(btDeletarRegistro5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 180, -1));
 
-        btEditarRegistro5.setBackground(new java.awt.Color(0, 2, 61));
-        btEditarRegistro5.setBorder(null);
-        btEditarRegistro5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/BotoesFormularios/Editar Registro.png"))); // NOI18N
-        btEditarRegistro5.setText("Editar Registro");
-        btEditarRegistro5.setToolTipText("Novo Registro");
-        btEditarRegistro5.setColorHover(new java.awt.Color(1, 6, 167));
-        btEditarRegistro5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btEditarRegistro5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btEditarRegistro5.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btEditarRegistro5.addActionListener(new java.awt.event.ActionListener() {
+        btEditarRegistroBcIcms.setBackground(new java.awt.Color(0, 2, 61));
+        btEditarRegistroBcIcms.setBorder(null);
+        btEditarRegistroBcIcms.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/BotoesFormularios/Editar Registro.png"))); // NOI18N
+        btEditarRegistroBcIcms.setText("Editar BC ICMS");
+        btEditarRegistroBcIcms.setToolTipText("Novo Registro");
+        btEditarRegistroBcIcms.setColorHover(new java.awt.Color(1, 6, 167));
+        btEditarRegistroBcIcms.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btEditarRegistroBcIcms.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btEditarRegistroBcIcms.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btEditarRegistroBcIcms.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btEditarRegistro5ActionPerformed(evt);
+                btEditarRegistroBcIcmsActionPerformed(evt);
             }
         });
-        menuTabelaRegistroIcms.add(btEditarRegistro5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, -1));
+        menuTabelaRegistroIcms.add(btEditarRegistroBcIcms, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, -1));
 
         menuTabelaRegistroIcmsSt.setBackground(new java.awt.Color(255, 255, 255));
         menuTabelaRegistroIcmsSt.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -398,21 +417,21 @@ public final class frmTributos extends javax.swing.JDialog {
         });
         menuTabelaRegistroIcmsSt.add(btDeletarRegistro6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 180, -1));
 
-        btEditarRegistro6.setBackground(new java.awt.Color(0, 2, 61));
-        btEditarRegistro6.setBorder(null);
-        btEditarRegistro6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/BotoesFormularios/Editar Registro.png"))); // NOI18N
-        btEditarRegistro6.setText("Editar Registro");
-        btEditarRegistro6.setToolTipText("Novo Registro");
-        btEditarRegistro6.setColorHover(new java.awt.Color(1, 6, 167));
-        btEditarRegistro6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btEditarRegistro6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btEditarRegistro6.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btEditarRegistro6.addActionListener(new java.awt.event.ActionListener() {
+        btEditarRegistroBcIcmsSt.setBackground(new java.awt.Color(0, 2, 61));
+        btEditarRegistroBcIcmsSt.setBorder(null);
+        btEditarRegistroBcIcmsSt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/BotoesFormularios/Editar Registro.png"))); // NOI18N
+        btEditarRegistroBcIcmsSt.setText("Editar BC ICMS ST");
+        btEditarRegistroBcIcmsSt.setToolTipText("Novo Registro");
+        btEditarRegistroBcIcmsSt.setColorHover(new java.awt.Color(1, 6, 167));
+        btEditarRegistroBcIcmsSt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btEditarRegistroBcIcmsSt.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btEditarRegistroBcIcmsSt.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btEditarRegistroBcIcmsSt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btEditarRegistro6ActionPerformed(evt);
+                btEditarRegistroBcIcmsStActionPerformed(evt);
             }
         });
-        menuTabelaRegistroIcmsSt.add(btEditarRegistro6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, -1));
+        menuTabelaRegistroIcmsSt.add(btEditarRegistroBcIcmsSt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, -1));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setModal(true);
@@ -972,7 +991,7 @@ public final class frmTributos extends javax.swing.JDialog {
 
         jScrollPane6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 2, 61), 2));
 
-        tabelaIcms.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaBcIcms.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -980,21 +999,21 @@ public final class frmTributos extends javax.swing.JDialog {
 
             }
         ));
-        tabelaIcms.setAltoHead(30);
-        tabelaIcms.setColorBackgoundHead(new java.awt.Color(0, 2, 61));
-        tabelaIcms.setColorFilasForeground1(new java.awt.Color(0, 2, 61));
-        tabelaIcms.setColorFilasForeground2(new java.awt.Color(0, 2, 61));
-        tabelaIcms.setColorSelBackgound(new java.awt.Color(1, 6, 167));
-        tabelaIcms.setComponentPopupMenu(popupMenuRegistroIcms);
-        tabelaIcms.setGrosorBordeFilas(0);
-        tabelaIcms.setGrosorBordeHead(0);
-        tabelaIcms.getTableHeader().setReorderingAllowed(false);
-        tabelaIcms.addMouseListener(new java.awt.event.MouseAdapter() {
+        tabelaBcIcms.setAltoHead(30);
+        tabelaBcIcms.setColorBackgoundHead(new java.awt.Color(0, 2, 61));
+        tabelaBcIcms.setColorFilasForeground1(new java.awt.Color(0, 2, 61));
+        tabelaBcIcms.setColorFilasForeground2(new java.awt.Color(0, 2, 61));
+        tabelaBcIcms.setColorSelBackgound(new java.awt.Color(1, 6, 167));
+        tabelaBcIcms.setComponentPopupMenu(popupMenuRegistroIcms);
+        tabelaBcIcms.setGrosorBordeFilas(0);
+        tabelaBcIcms.setGrosorBordeHead(0);
+        tabelaBcIcms.getTableHeader().setReorderingAllowed(false);
+        tabelaBcIcms.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tabelaIcmsMouseClicked(evt);
+                tabelaBcIcmsMouseClicked(evt);
             }
         });
-        jScrollPane6.setViewportView(tabelaIcms);
+        jScrollPane6.setViewportView(tabelaBcIcms);
 
         javax.swing.GroupLayout abaBcIcmsLayout = new javax.swing.GroupLayout(abaBcIcms);
         abaBcIcms.setLayout(abaBcIcmsLayout);
@@ -1061,7 +1080,7 @@ public final class frmTributos extends javax.swing.JDialog {
 
         jScrollPane7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 2, 61), 2));
 
-        tabelaIcmsSt.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaBcIcmsSt.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -1069,21 +1088,21 @@ public final class frmTributos extends javax.swing.JDialog {
 
             }
         ));
-        tabelaIcmsSt.setAltoHead(30);
-        tabelaIcmsSt.setColorBackgoundHead(new java.awt.Color(0, 2, 61));
-        tabelaIcmsSt.setColorFilasForeground1(new java.awt.Color(0, 2, 61));
-        tabelaIcmsSt.setColorFilasForeground2(new java.awt.Color(0, 2, 61));
-        tabelaIcmsSt.setColorSelBackgound(new java.awt.Color(1, 6, 167));
-        tabelaIcmsSt.setComponentPopupMenu(popupMenuRegistroIcmsSt);
-        tabelaIcmsSt.setGrosorBordeFilas(0);
-        tabelaIcmsSt.setGrosorBordeHead(0);
-        tabelaIcmsSt.getTableHeader().setReorderingAllowed(false);
-        tabelaIcmsSt.addMouseListener(new java.awt.event.MouseAdapter() {
+        tabelaBcIcmsSt.setAltoHead(30);
+        tabelaBcIcmsSt.setColorBackgoundHead(new java.awt.Color(0, 2, 61));
+        tabelaBcIcmsSt.setColorFilasForeground1(new java.awt.Color(0, 2, 61));
+        tabelaBcIcmsSt.setColorFilasForeground2(new java.awt.Color(0, 2, 61));
+        tabelaBcIcmsSt.setColorSelBackgound(new java.awt.Color(1, 6, 167));
+        tabelaBcIcmsSt.setComponentPopupMenu(popupMenuRegistroIcmsSt);
+        tabelaBcIcmsSt.setGrosorBordeFilas(0);
+        tabelaBcIcmsSt.setGrosorBordeHead(0);
+        tabelaBcIcmsSt.getTableHeader().setReorderingAllowed(false);
+        tabelaBcIcmsSt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tabelaIcmsStMouseClicked(evt);
+                tabelaBcIcmsStMouseClicked(evt);
             }
         });
-        jScrollPane7.setViewportView(tabelaIcmsSt);
+        jScrollPane7.setViewportView(tabelaBcIcmsSt);
 
         javax.swing.GroupLayout abaBcIcmsStLayout = new javax.swing.GroupLayout(abaBcIcmsSt);
         abaBcIcmsSt.setLayout(abaBcIcmsStLayout);
@@ -1703,12 +1722,12 @@ public final class frmTributos extends javax.swing.JDialog {
 //            JOptionPane.showMessageDialog(null, "Erro ao tentar exibir a permissão:" + ex);
         }
         ModeloTabela modTabela = new ModeloTabela(dados, Colunas);
-        tabelaIcms.setModel(modTabela);
-        tabelaIcms.getColumnModel().getColumn(0).setPreferredWidth(653);
-        tabelaIcms.getColumnModel().getColumn(0).setResizable(false);
-        tabelaIcms.getTableHeader().setReorderingAllowed(false);
-        tabelaIcms.setAutoResizeMode(tabelaIcms.AUTO_RESIZE_OFF);
-        tabelaIcms.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        tabelaBcIcms.setModel(modTabela);
+        tabelaBcIcms.getColumnModel().getColumn(0).setPreferredWidth(653);
+        tabelaBcIcms.getColumnModel().getColumn(0).setResizable(false);
+        tabelaBcIcms.getTableHeader().setReorderingAllowed(false);
+        tabelaBcIcms.setAutoResizeMode(tabelaBcIcms.AUTO_RESIZE_OFF);
+        tabelaBcIcms.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         conBanco.desconecta();
     }
 
@@ -1727,12 +1746,12 @@ public final class frmTributos extends javax.swing.JDialog {
 //            JOptionPane.showMessageDialog(null, "Erro ao tentar exibir a permissão:" + ex);
         }
         ModeloTabela modTabela = new ModeloTabela(dados, Colunas);
-        tabelaIcmsSt.setModel(modTabela);
-        tabelaIcmsSt.getColumnModel().getColumn(0).setPreferredWidth(653);
-        tabelaIcmsSt.getColumnModel().getColumn(0).setResizable(false);
-        tabelaIcmsSt.getTableHeader().setReorderingAllowed(false);
-        tabelaIcmsSt.setAutoResizeMode(tabelaIcmsSt.AUTO_RESIZE_OFF);
-        tabelaIcmsSt.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        tabelaBcIcmsSt.setModel(modTabela);
+        tabelaBcIcmsSt.getColumnModel().getColumn(0).setPreferredWidth(653);
+        tabelaBcIcmsSt.getColumnModel().getColumn(0).setResizable(false);
+        tabelaBcIcmsSt.getTableHeader().setReorderingAllowed(false);
+        tabelaBcIcmsSt.setAutoResizeMode(tabelaBcIcmsSt.AUTO_RESIZE_OFF);
+        tabelaBcIcmsSt.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         conBanco.desconecta();
     }
 
@@ -1788,17 +1807,83 @@ public final class frmTributos extends javax.swing.JDialog {
 
         String descCest = "" + tabelaCest.getValueAt(tabelaCest.getSelectedRow(), 0);
         crudCest.ConsultarCest(descCest);
-        desc_Cest = crudCest.getNum_Cest();
+        num_Cest = crudCest.getNum_Cest();
         status_Cest = crudCest.getStatus_Cest();
         id_Cest = crudCest.getId_Cest();
-        FrmCestAlterar frmCestAlterar = new FrmCestAlterar(null, true, id_Cest, desc_Cest, status_Cest, this);
+        FrmCestAlterar frmCestAlterar = new FrmCestAlterar(null, true, id_Cest, num_Cest, status_Cest, this);
         frmCestAlterar.setVisible(true);
     }
 
-    private void btEditarRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarRegistroActionPerformed
+    public void chamarFormularioAtualizarOrgemMercadoria() {
+
+        String descOrigemMercadoria = "" + tabelaOrigemMercadoria.getValueAt(tabelaOrigemMercadoria.getSelectedRow(), 0);
+        crudOrigemMercadoria.ConsultarOrigemMercadoria(descOrigemMercadoria);
+        desc_Org_Merc = crudOrigemMercadoria.getDesc_Org_Merc();
+        status_Org_Merc = crudOrigemMercadoria.getStatus_Org_Merc();
+        id_Org_Merc = crudOrigemMercadoria.getId_Org_Merc();
+        FrmOrigemMercadoriaAlterar frmOrigemMercadoriaAlterar = new FrmOrigemMercadoriaAlterar(null, true, id_Org_Merc, desc_Org_Merc, status_Org_Merc, this);
+        frmOrigemMercadoriaAlterar.setVisible(true);
+    }
+
+    public void chamarFormularioAtualizarCst() {
+
+        String descCst = "" + tabelaCst.getValueAt(tabelaCst.getSelectedRow(), 0);
+        crudCst.ConsultarCst(descCst);
+        desc_Cst = crudCst.getDesc_Cst();
+        status_Cst = crudCst.getStatus_Cst();
+        id_Cst = crudCst.getId_Cst();
+        FrmCstAlterar frmCstAlterar = new FrmCstAlterar(null, true, id_Cst, desc_Cst, status_Cst, this);
+        frmCstAlterar.setVisible(true);
+    }
+
+    public void chamarFormularioAtualizarCsosn() {
+
+        String descCsosn = "" + tabelaCsosn.getValueAt(tabelaCsosn.getSelectedRow(), 0);
+        crudCsosn.ConsultarCsosn(descCsosn);
+        desc_Csosn = crudCsosn.getDesc_Csosn();
+        status_Csosn = crudCsosn.getStatus_Csosn();
+        id_Csosn = crudCsosn.getId_Csosn();
+        FrmCsosnAlterar frmCsosnAlterar = new FrmCsosnAlterar(null, true, id_Csosn, desc_Csosn, status_Csosn, this);
+        frmCsosnAlterar.setVisible(true);
+    }
+
+    public void chamarFormularioAtualizarCrt() {
+
+        String descCrt = "" + tabelaCrt.getValueAt(tabelaCrt.getSelectedRow(), 0);
+        crudCrt.ConsultarCrt(descCrt);
+        desc_Crt = crudCrt.getDesc_Crt();
+        status_Crt = crudCrt.getStatus_Crt();
+        id_Crt = crudCrt.getId_Crt();
+        FrmCrtAlterar frmCrtAlterar = new FrmCrtAlterar(null, true, id_Crt, desc_Crt, status_Crt, this);
+        frmCrtAlterar.setVisible(true);
+    }
+
+    public void chamarFormularioAtualizarBcIcms() {
+
+        String descBcIcms = "" + tabelaBcIcms.getValueAt(tabelaBcIcms.getSelectedRow(), 0);
+        crudBcIcms.ConsultarBcIcms(descBcIcms);
+        desc_Bc_Icms = crudBcIcms.getDesc_Bc_Icms();
+        status_Bc_Icms = crudBcIcms.getStatus_Bc_Icms();
+        id_Bc_Icms = crudBcIcms.getId_Bc_Icms();
+        FrmBcIcmsAlterar frmBcIcmsAlterar = new FrmBcIcmsAlterar(null, true, id_Bc_Icms, desc_Bc_Icms, status_Bc_Icms, this);
+        frmBcIcmsAlterar.setVisible(true);
+    }
+
+    public void chamarFormularioAtualizarBcIcmsSt() {
+
+        String descBcIcmsSt = "" + tabelaBcIcmsSt.getValueAt(tabelaBcIcmsSt.getSelectedRow(), 0);
+        crudBcIcmsSt.ConsultarBcIcmsSt(descBcIcmsSt);
+        desc_Bc_Icms_St = crudBcIcmsSt.getDesc_Bc_Icms_St();
+        status_Bc_Icms_St = crudBcIcmsSt.getStatus_Bc_Icms_St();
+        id_Bc_Icms_St = crudBcIcmsSt.getId_Bc_Icms_St();
+        FrmBcIcmsStAlterar frmBcIcmsStAlterar = new FrmBcIcmsStAlterar(null, true, id_Bc_Icms_St, desc_Bc_Icms_St, status_Bc_Icms_St, this);
+        frmBcIcmsStAlterar.setVisible(true);
+    }
+
+    private void btEditarRegistroCestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarRegistroCestActionPerformed
 
         chamarFormularioAtualizarCest();
-    }//GEN-LAST:event_btEditarRegistroActionPerformed
+    }//GEN-LAST:event_btEditarRegistroCestActionPerformed
 
     private void tabelaCestMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaCestMouseClicked
 
@@ -1827,7 +1912,10 @@ public final class frmTributos extends javax.swing.JDialog {
     }//GEN-LAST:event_txtConsultarRegistroCsosnKeyReleased
 
     private void tabelaCsosnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaCsosnMouseClicked
-        // TODO add your handling code here:
+
+        if (evt.getClickCount() > 1) {
+            chamarFormularioAtualizarCsosn();
+        }
     }//GEN-LAST:event_tabelaCsosnMouseClicked
 
     private void btNovoRegistroOrigemMercadoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNovoRegistroOrigemMercadoriaActionPerformed
@@ -1841,7 +1929,10 @@ public final class frmTributos extends javax.swing.JDialog {
     }//GEN-LAST:event_txtConsultarRegistroOrigemMercadoriaKeyReleased
 
     private void tabelaOrigemMercadoriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaOrigemMercadoriaMouseClicked
-        // TODO add your handling code here:
+
+        if (evt.getClickCount() > 1) {
+            chamarFormularioAtualizarOrgemMercadoria();
+        }
     }//GEN-LAST:event_tabelaOrigemMercadoriaMouseClicked
 
     private void btNovoRegistroCstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNovoRegistroCstActionPerformed
@@ -1855,7 +1946,10 @@ public final class frmTributos extends javax.swing.JDialog {
     }//GEN-LAST:event_txtConsultarRegistroCstKeyReleased
 
     private void tabelaCstMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaCstMouseClicked
-        // TODO add your handling code here:
+
+        if (evt.getClickCount() > 1) {
+            chamarFormularioAtualizarCst();
+        }
     }//GEN-LAST:event_tabelaCstMouseClicked
 
     private void btNovoRegistroCrtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNovoRegistroCrtActionPerformed
@@ -1869,7 +1963,10 @@ public final class frmTributos extends javax.swing.JDialog {
     }//GEN-LAST:event_txtConsultarRegistroCrtKeyReleased
 
     private void tabelaCrtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaCrtMouseClicked
-        // TODO add your handling code here:
+
+        if (evt.getClickCount() > 1) {
+            chamarFormularioAtualizarCrt();
+        }
     }//GEN-LAST:event_tabelaCrtMouseClicked
 
     private void btNovoRegistroBcIcmsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNovoRegistroBcIcmsActionPerformed
@@ -1879,12 +1976,15 @@ public final class frmTributos extends javax.swing.JDialog {
     }//GEN-LAST:event_btNovoRegistroBcIcmsActionPerformed
 
     private void txtConsultarRegistroBcIcmsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtConsultarRegistroBcIcmsKeyReleased
-        // TODO add your handling code here:
+               
     }//GEN-LAST:event_txtConsultarRegistroBcIcmsKeyReleased
 
-    private void tabelaIcmsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaIcmsMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tabelaIcmsMouseClicked
+    private void tabelaBcIcmsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaBcIcmsMouseClicked
+        
+        if (evt.getClickCount() > 1) {
+            chamarFormularioAtualizarBcIcms();
+        }        
+    }//GEN-LAST:event_tabelaBcIcmsMouseClicked
 
     private void btNovoRegistroBcIcmsStActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNovoRegistroBcIcmsStActionPerformed
 
@@ -1896,57 +1996,108 @@ public final class frmTributos extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtConsultarRegistroBcIcmsStKeyReleased
 
-    private void tabelaIcmsStMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaIcmsStMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tabelaIcmsStMouseClicked
+    private void tabelaBcIcmsStMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaBcIcmsStMouseClicked
+        
+         if (evt.getClickCount() > 1) {
+            chamarFormularioAtualizarBcIcmsSt();
+        }  
+    }//GEN-LAST:event_tabelaBcIcmsStMouseClicked
 
     private void btDeletarRegistro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDeletarRegistro1ActionPerformed
-        // TODO add your handling code here:
+
+        String pergunta = "Você deseja deletar o registro:'" + tabelaOrigemMercadoria.getValueAt(tabelaOrigemMercadoria.getSelectedRow(), 0) + "'";
+        int opcao_escolhida = JOptionPane.showConfirmDialog(null, pergunta, "", JOptionPane.YES_NO_OPTION);
+        if (opcao_escolhida == JOptionPane.YES_OPTION) {
+            String descOrigemMercadoria = "" + tabelaOrigemMercadoria.getValueAt(tabelaOrigemMercadoria.getSelectedRow(), 0);
+            crudOrigemMercadoria.DesativarOrigemMercadoria(descOrigemMercadoria, "não ativo");
+            atualizaTabelaOrigemMercadoria();
+        }
     }//GEN-LAST:event_btDeletarRegistro1ActionPerformed
 
-    private void btEditarRegistro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarRegistro1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btEditarRegistro1ActionPerformed
+    private void btEditarRegistroOrigemMercadoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarRegistroOrigemMercadoriaActionPerformed
+
+        chamarFormularioAtualizarOrgemMercadoria();
+    }//GEN-LAST:event_btEditarRegistroOrigemMercadoriaActionPerformed
 
     private void btDeletarRegistro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDeletarRegistro2ActionPerformed
-        // TODO add your handling code here:
+
+        String pergunta = "Você deseja deletar o registro:'" + tabelaCst.getValueAt(tabelaCst.getSelectedRow(), 0) + "'";
+        int opcao_escolhida = JOptionPane.showConfirmDialog(null, pergunta, "", JOptionPane.YES_NO_OPTION);
+        if (opcao_escolhida == JOptionPane.YES_OPTION) {
+            String descCst = "" + tabelaCst.getValueAt(tabelaCst.getSelectedRow(), 0);
+            crudCst.DesativarCst(descCst, "não ativo");
+            atualizaTabelaCst();
+        }
     }//GEN-LAST:event_btDeletarRegistro2ActionPerformed
 
-    private void btEditarRegistro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarRegistro2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btEditarRegistro2ActionPerformed
+    private void btEditarRegistroCstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarRegistroCstActionPerformed
+
+        chamarFormularioAtualizarCst();
+    }//GEN-LAST:event_btEditarRegistroCstActionPerformed
 
     private void btDeletarRegistro3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDeletarRegistro3ActionPerformed
-        // TODO add your handling code here:
+
+        String pergunta = "Você deseja deletar o registro:'" + tabelaCsosn.getValueAt(tabelaCsosn.getSelectedRow(), 0) + "'";
+        int opcao_escolhida = JOptionPane.showConfirmDialog(null, pergunta, "", JOptionPane.YES_NO_OPTION);
+        if (opcao_escolhida == JOptionPane.YES_OPTION) {
+            String descCsosn = "" + tabelaCsosn.getValueAt(tabelaCsosn.getSelectedRow(), 0);
+            crudCsosn.DesativarCsosn(descCsosn, "não ativo");
+            atualizaTabelaCsosn();
+        }
     }//GEN-LAST:event_btDeletarRegistro3ActionPerformed
 
-    private void btEditarRegistro3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarRegistro3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btEditarRegistro3ActionPerformed
+    private void btEditarRegistroCsosnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarRegistroCsosnActionPerformed
+
+        chamarFormularioAtualizarCsosn();
+    }//GEN-LAST:event_btEditarRegistroCsosnActionPerformed
 
     private void btDeletarRegistro4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDeletarRegistro4ActionPerformed
-        // TODO add your handling code here:
+
+        String pergunta = "Você deseja deletar o registro:'" + tabelaCrt.getValueAt(tabelaCrt.getSelectedRow(), 0) + "'";
+        int opcao_escolhida = JOptionPane.showConfirmDialog(null, pergunta, "", JOptionPane.YES_NO_OPTION);
+        if (opcao_escolhida == JOptionPane.YES_OPTION) {
+            String descCrt = "" + tabelaCrt.getValueAt(tabelaCrt.getSelectedRow(), 0);
+            crudCrt.DesativarCrt(descCrt, "não ativo");
+            atualizaTabelaCrt();
+        }
     }//GEN-LAST:event_btDeletarRegistro4ActionPerformed
 
-    private void btEditarRegistro4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarRegistro4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btEditarRegistro4ActionPerformed
+    private void btEditarRegistroCrtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarRegistroCrtActionPerformed
+
+        chamarFormularioAtualizarCrt();
+    }//GEN-LAST:event_btEditarRegistroCrtActionPerformed
 
     private void btDeletarRegistro5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDeletarRegistro5ActionPerformed
-        // TODO add your handling code here:
+
+        String pergunta = "Você deseja deletar o registro:'" + tabelaBcIcms.getValueAt(tabelaBcIcms.getSelectedRow(), 0) + "'";
+        int opcao_escolhida = JOptionPane.showConfirmDialog(null, pergunta, "", JOptionPane.YES_NO_OPTION);
+        if (opcao_escolhida == JOptionPane.YES_OPTION) {
+            String descBcIcms = "" + tabelaBcIcms.getValueAt(tabelaBcIcms.getSelectedRow(), 0);
+            crudBcIcms.DesativarBcIcms(descBcIcms, "não ativo");
+            atualizaTabelaCrt();
+        }
     }//GEN-LAST:event_btDeletarRegistro5ActionPerformed
 
-    private void btEditarRegistro5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarRegistro5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btEditarRegistro5ActionPerformed
+    private void btEditarRegistroBcIcmsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarRegistroBcIcmsActionPerformed
+
+        chamarFormularioAtualizarBcIcms();
+    }//GEN-LAST:event_btEditarRegistroBcIcmsActionPerformed
 
     private void btDeletarRegistro6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDeletarRegistro6ActionPerformed
-        // TODO add your handling code here:
+
+        String pergunta = "Você deseja deletar o registro:'" + tabelaBcIcmsSt.getValueAt(tabelaBcIcmsSt.getSelectedRow(), 0) + "'";
+        int opcao_escolhida = JOptionPane.showConfirmDialog(null, pergunta, "", JOptionPane.YES_NO_OPTION);
+        if (opcao_escolhida == JOptionPane.YES_OPTION) {
+            String descBcIcmsSt = "" + tabelaBcIcmsSt.getValueAt(tabelaBcIcmsSt.getSelectedRow(), 0);
+            crudBcIcmsSt.DesativarBcIcmsSt(descBcIcmsSt, "não ativo");
+            atualizaTabelaIcmsSt();
+        }
     }//GEN-LAST:event_btDeletarRegistro6ActionPerformed
 
-    private void btEditarRegistro6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarRegistro6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btEditarRegistro6ActionPerformed
+    private void btEditarRegistroBcIcmsStActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEditarRegistroBcIcmsStActionPerformed
+
+        chamarFormularioAtualizarBcIcmsSt();
+    }//GEN-LAST:event_btEditarRegistroBcIcmsStActionPerformed
 
     private void btNovoRegistroBcIcmsSt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNovoRegistroBcIcmsSt1ActionPerformed
         // TODO add your handling code here:
@@ -2006,13 +2157,13 @@ public final class frmTributos extends javax.swing.JDialog {
     private rojeru_san.RSButtonRiple btDeletarRegistro4;
     private rojeru_san.RSButtonRiple btDeletarRegistro5;
     private rojeru_san.RSButtonRiple btDeletarRegistro6;
-    private rojeru_san.RSButtonRiple btEditarRegistro;
-    private rojeru_san.RSButtonRiple btEditarRegistro1;
-    private rojeru_san.RSButtonRiple btEditarRegistro2;
-    private rojeru_san.RSButtonRiple btEditarRegistro3;
-    private rojeru_san.RSButtonRiple btEditarRegistro4;
-    private rojeru_san.RSButtonRiple btEditarRegistro5;
-    private rojeru_san.RSButtonRiple btEditarRegistro6;
+    private rojeru_san.RSButtonRiple btEditarRegistroBcIcms;
+    private rojeru_san.RSButtonRiple btEditarRegistroBcIcmsSt;
+    private rojeru_san.RSButtonRiple btEditarRegistroCest;
+    private rojeru_san.RSButtonRiple btEditarRegistroCrt;
+    private rojeru_san.RSButtonRiple btEditarRegistroCsosn;
+    private rojeru_san.RSButtonRiple btEditarRegistroCst;
+    private rojeru_san.RSButtonRiple btEditarRegistroOrigemMercadoria;
     private rojeru_san.RSButtonRiple btInserirRegistroNcm;
     private rojeru_san.RSButtonRiple btNovoRegistroBcIcms;
     private rojeru_san.RSButtonRiple btNovoRegistroBcIcmsSt;
@@ -2067,12 +2218,12 @@ public final class frmTributos extends javax.swing.JDialog {
     private javax.swing.JPopupMenu popupMenuRegistroIcmsSt;
     private javax.swing.JPopupMenu popupMenuRegistroOrigemMercadoria;
     private rojeru_san.RSPanelShadow rSPanelShadow1;
+    private rojerusan.RSTableMetro tabelaBcIcms;
+    private rojerusan.RSTableMetro tabelaBcIcmsSt;
     private rojerusan.RSTableMetro tabelaCest;
     private rojerusan.RSTableMetro tabelaCrt;
     private rojerusan.RSTableMetro tabelaCsosn;
     private rojerusan.RSTableMetro tabelaCst;
-    private rojerusan.RSTableMetro tabelaIcms;
-    private rojerusan.RSTableMetro tabelaIcmsSt;
     private rojerusan.RSTableMetro tabelaIcmsSt1;
     private rojerusan.RSTableMetro tabelaIcmsSt2;
     private rojerusan.RSTableMetro tabelaIcmsSt3;

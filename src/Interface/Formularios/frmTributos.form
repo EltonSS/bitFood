@@ -50,7 +50,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="rojeru_san.RSButtonRiple" name="btEditarRegistro">
+        <Component class="rojeru_san.RSButtonRiple" name="btEditarRegistroCest">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3d" green="2" red="0" type="rgb"/>
@@ -73,7 +73,7 @@
             <Property name="horizontalTextPosition" type="int" value="4"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEditarRegistroActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEditarRegistroCestActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -158,11 +158,11 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="40" width="180" height="-1"/>
+              <AbsoluteConstraints x="0" y="40" width="220" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="rojeru_san.RSButtonRiple" name="btEditarRegistro1">
+        <Component class="rojeru_san.RSButtonRiple" name="btEditarRegistroOrigemMercadoria">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3d" green="2" red="0" type="rgb"/>
@@ -173,7 +173,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Imagem/BotoesFormularios/Editar Registro.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Editar Registro"/>
+            <Property name="text" type="java.lang.String" value="Editar Orgiem Mercadoria"/>
             <Property name="toolTipText" type="java.lang.String" value="Novo Registro"/>
             <Property name="colorHover" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a7" green="6" red="1" type="rgb"/>
@@ -185,11 +185,11 @@
             <Property name="horizontalTextPosition" type="int" value="4"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEditarRegistro1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEditarRegistroOrigemMercadoriaActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="180" height="-1"/>
+              <AbsoluteConstraints x="0" y="0" width="220" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -243,7 +243,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="rojeru_san.RSButtonRiple" name="btEditarRegistro2">
+        <Component class="rojeru_san.RSButtonRiple" name="btEditarRegistroCst">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3d" green="2" red="0" type="rgb"/>
@@ -254,7 +254,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Imagem/BotoesFormularios/Editar Registro.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Editar Registro"/>
+            <Property name="text" type="java.lang.String" value="Editar CST"/>
             <Property name="toolTipText" type="java.lang.String" value="Novo Registro"/>
             <Property name="colorHover" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a7" green="6" red="1" type="rgb"/>
@@ -266,7 +266,7 @@
             <Property name="horizontalTextPosition" type="int" value="4"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEditarRegistro2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEditarRegistroCstActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -324,7 +324,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="rojeru_san.RSButtonRiple" name="btEditarRegistro3">
+        <Component class="rojeru_san.RSButtonRiple" name="btEditarRegistroCsosn">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3d" green="2" red="0" type="rgb"/>
@@ -335,7 +335,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Imagem/BotoesFormularios/Editar Registro.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Editar Registro"/>
+            <Property name="text" type="java.lang.String" value="Editar CSOSN"/>
             <Property name="toolTipText" type="java.lang.String" value="Novo Registro"/>
             <Property name="colorHover" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a7" green="6" red="1" type="rgb"/>
@@ -347,7 +347,7 @@
             <Property name="horizontalTextPosition" type="int" value="4"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEditarRegistro3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEditarRegistroCsosnActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -405,7 +405,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="rojeru_san.RSButtonRiple" name="btEditarRegistro4">
+        <Component class="rojeru_san.RSButtonRiple" name="btEditarRegistroCrt">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3d" green="2" red="0" type="rgb"/>
@@ -416,7 +416,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Imagem/BotoesFormularios/Editar Registro.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Editar Registro"/>
+            <Property name="text" type="java.lang.String" value="Editar CRT"/>
             <Property name="toolTipText" type="java.lang.String" value="Novo Registro"/>
             <Property name="colorHover" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a7" green="6" red="1" type="rgb"/>
@@ -428,7 +428,7 @@
             <Property name="horizontalTextPosition" type="int" value="4"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEditarRegistro4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEditarRegistroCrtActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -486,7 +486,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="rojeru_san.RSButtonRiple" name="btEditarRegistro5">
+        <Component class="rojeru_san.RSButtonRiple" name="btEditarRegistroBcIcms">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3d" green="2" red="0" type="rgb"/>
@@ -497,7 +497,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Imagem/BotoesFormularios/Editar Registro.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Editar Registro"/>
+            <Property name="text" type="java.lang.String" value="Editar BC ICMS"/>
             <Property name="toolTipText" type="java.lang.String" value="Novo Registro"/>
             <Property name="colorHover" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a7" green="6" red="1" type="rgb"/>
@@ -509,7 +509,7 @@
             <Property name="horizontalTextPosition" type="int" value="4"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEditarRegistro5ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEditarRegistroBcIcmsActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -567,7 +567,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="rojeru_san.RSButtonRiple" name="btEditarRegistro6">
+        <Component class="rojeru_san.RSButtonRiple" name="btEditarRegistroBcIcmsSt">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3d" green="2" red="0" type="rgb"/>
@@ -578,7 +578,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Imagem/BotoesFormularios/Editar Registro.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Editar Registro"/>
+            <Property name="text" type="java.lang.String" value="Editar BC ICMS ST"/>
             <Property name="toolTipText" type="java.lang.String" value="Novo Registro"/>
             <Property name="colorHover" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="a7" green="6" red="1" type="rgb"/>
@@ -590,7 +590,7 @@
             <Property name="horizontalTextPosition" type="int" value="4"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEditarRegistro6ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEditarRegistroBcIcmsStActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -1716,7 +1716,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="rojerusan.RSTableMetro" name="tabelaIcms">
+                        <Component class="rojerusan.RSTableMetro" name="tabelaBcIcms">
                           <Properties>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                               <Table columnCount="0" rowCount="0"/>
@@ -1747,7 +1747,7 @@
                             </Property>
                           </Properties>
                           <Events>
-                            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tabelaIcmsMouseClicked"/>
+                            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tabelaBcIcmsMouseClicked"/>
                           </Events>
                         </Component>
                       </SubComponents>
@@ -1876,7 +1876,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="rojerusan.RSTableMetro" name="tabelaIcmsSt">
+                        <Component class="rojerusan.RSTableMetro" name="tabelaBcIcmsSt">
                           <Properties>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                               <Table columnCount="0" rowCount="0"/>
@@ -1907,7 +1907,7 @@
                             </Property>
                           </Properties>
                           <Events>
-                            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tabelaIcmsStMouseClicked"/>
+                            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tabelaBcIcmsStMouseClicked"/>
                           </Events>
                         </Component>
                       </SubComponents>

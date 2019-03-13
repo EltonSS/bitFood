@@ -80,7 +80,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="txtDescFabricanteProduto" min="-2" pref="422" max="-2" attributes="0"/>
+                          <Component id="txtDescCst" min="-2" pref="422" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="btAlterarRegistro" min="-2" pref="156" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -99,7 +99,7 @@
                       <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                       <Component id="chkStatus" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="txtDescFabricanteProduto" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtDescCst" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btAlterarRegistro" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -158,7 +158,7 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="text" type="java.lang.String" value="Alterar Fabricante de Produto"/>
+                    <Property name="text" type="java.lang.String" value="Alterar CST"/>
                   </Properties>
                 </Component>
                 <Component class="rojeru_san.RSButtonRiple" name="btSair">
@@ -248,12 +248,12 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkStatusActionPerformed"/>
               </Events>
             </Component>
-            <Component class="rojerusan.RSMetroTextPlaceHolder" name="txtDescFabricanteProduto">
+            <Component class="rojerusan.RSMetroTextPlaceHolder" name="txtDescCst">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="3d" green="2" red="0" type="rgb"/>
                 </Property>
-                <Property name="toolTipText" type="java.lang.String" value="Digite a descri&#xe7;&#xe3;o do fabricante"/>
+                <Property name="toolTipText" type="java.lang.String" value="Digite a descri&#xe7;&#xe3;o do CST"/>
                 <Property name="borderColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="3d" green="2" red="0" type="rgb"/>
                 </Property>
@@ -263,13 +263,13 @@
                 <Property name="phColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="3d" green="2" red="0" type="rgb"/>
                 </Property>
-                <Property name="placeholder" type="java.lang.String" value="Digite a descri&#xe7;&#xe3;o do fabricante"/>
+                <Property name="placeholder" type="java.lang.String" value="Digite a descri&#xe7;&#xe3;o do CST"/>
               </Properties>
               <AccessibilityProperties>
                 <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
               </AccessibilityProperties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDescFabricanteProdutoActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDescCstActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

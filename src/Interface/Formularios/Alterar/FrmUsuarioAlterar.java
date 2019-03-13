@@ -7,13 +7,14 @@ import Interface.Formularios.frmUsuario;
 import java.sql.SQLException;
 import javax.swing.JDialog;
 
-public class FrmUsuarioAlterar extends javax.swing.JDialog {
+public final class FrmUsuarioAlterar extends javax.swing.JDialog {
 
     private final JDialog parente;
     crudUsuario crudUsu = new crudUsuario();
     ConectaBanco conBanco = new ConectaBanco();
     int xx, yy, id_Usu;
     String nome_Usu, status_Usu, login_Usu;
+    String nome_usuario, login_usuario;
 
     public FrmUsuarioAlterar(java.awt.Frame parent, boolean modal, int idUsu, String nomeUsu, String loginUsu, String descFunc, String descPrm, String senhaUsu, String statusUsu, JDialog p) {
 
@@ -301,6 +302,8 @@ public class FrmUsuarioAlterar extends javax.swing.JDialog {
         } else {
             chkStatus.setSelected(false);
         }
+        nome_usuario = nomeUsu;
+        login_usuario = loginUsu;
     }
 
     public void cbFuncaoUsuario() {
@@ -387,27 +390,28 @@ public class FrmUsuarioAlterar extends javax.swing.JDialog {
                             JOptionPane.showMessageDialog(rootPane, "Escolha a permissão do usuário!!");
                             cbPermissaoUsuario.requestFocus();
                         } else {
-                            verificarRegistro();
-                            if (txtNomeUsuario.getText().equals((String) nome_Usu)) {
-                                JOptionPane.showMessageDialog(rootPane, "Não é possível realizar essa alteração pois já existe esse nome registrado no sistema!!");
-                                txtNomeUsuario.requestFocus();
-                            } else {
-                                if (txtLoginAcessoUsuario.getText().equals((String) login_Usu)) {
-                                    JOptionPane.showMessageDialog(rootPane, "Esse login já está cadastro no sistema, por favor digite outro login válido!! ");
-                                    txtLoginAcessoUsuario.requestDefaultFocus();
+                            verificarRegistro();                            
+                                if (txtNomeUsuario.getText().equals((String) nome_Usu)) {
+                                    JOptionPane.showMessageDialog(rootPane, "Não é possível realizar essa alteração pois já existe esse nome registrado no sistema!!");
+                                    txtNomeUsuario.requestFocus();
                                 } else {
-                                    crudUsu.AlterarUsuario(id_Usu, txtNomeUsuario.getText(), txtLoginAcessoUsuario.getText(),txtPwdAcessoUsuario.getText(),
-                                            (String) cbFuncaoUsuario.getSelectedItem(), (String) cbPermissaoUsuario.getSelectedItem(), status_Usu);
-                                    atualizaTabela();
-                                    dispose();
+                                    if (txtLoginAcessoUsuario.getText().equals((String) login_Usu)) {
+                                        JOptionPane.showMessageDialog(rootPane, "Esse login já está cadastro no sistema, por favor digite outro login válido!! ");
+                                        txtLoginAcessoUsuario.requestFocus();
+                                    } else {
+                                        crudUsu.AlterarUsuario(id_Usu, txtNomeUsuario.getText(), txtLoginAcessoUsuario.getText(), txtPwdAcessoUsuario.getText(),
+                                                (String) cbFuncaoUsuario.getSelectedItem(), (String) cbPermissaoUsuario.getSelectedItem(), status_Usu);
+                                        atualizaTabela();
+                                        dispose();
+                                    }
                                 }
+
                             }
                         }
                     }
                 }
             }
         }
-    }
 
     private void btAlterarRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAlterarRegistroActionPerformed
 

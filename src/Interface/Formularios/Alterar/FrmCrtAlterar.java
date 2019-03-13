@@ -1,27 +1,27 @@
 package Interface.Formularios.Alterar;
 
-import Banco.CRUD.crudFabricante;
+import Banco.CRUD.crudCrt;
 import javax.swing.JOptionPane;
 import Banco.Conexao.ConectaBanco;
-import Interface.Formularios.frmFabricante;
+import Interface.Formularios.frmTributos;
 import java.sql.SQLException;
 import javax.swing.JDialog;
 
 public class FrmCrtAlterar extends javax.swing.JDialog {
 
     private final JDialog parente;
-    crudFabricante crudFabProd = new crudFabricante();
+    crudCrt crudCrt = new crudCrt();
     ConectaBanco conBanco = new ConectaBanco();
-    int xx, yy, id_Fab_Prod;
-    String desc_Fab_Prod, status_Fab_Prod;
+    int xx, yy, id_Crt;
+    String desc_Crt, status_Crt;
 
-    public FrmCrtAlterar(java.awt.Frame parent, boolean modal, int idFabProd, String descFabProd, String statusFabProd, JDialog p) {
+    public FrmCrtAlterar(java.awt.Frame parent, boolean modal, int idCrt, String descCrt, String statusCrt, JDialog p) {
 
         super(parent, modal);
         initComponents();
         this.parente = p;
-        txtDescFabricanteProduto.requestFocus();
-        preencherCampos(idFabProd, descFabProd, statusFabProd);
+        txtDescCrt.requestFocus();
+        preencherCampos(idCrt, descCrt, statusCrt);
     }
 
     @SuppressWarnings("unchecked")
@@ -39,7 +39,7 @@ public class FrmCrtAlterar extends javax.swing.JDialog {
         btAlterarRegistro = new rojeru_san.RSButtonRiple();
         btCancelarRegistro = new rojeru_san.RSButtonRiple();
         chkStatus = new javax.swing.JCheckBox();
-        txtDescFabricanteProduto = new rojerusan.RSMetroTextPlaceHolder();
+        txtDescCrt = new rojerusan.RSMetroTextPlaceHolder();
 
         rSLabelVerticalD1.setText("rSLabelVerticalD1");
 
@@ -79,7 +79,7 @@ public class FrmCrtAlterar extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel1.setText("Alterar Fabricante de Produto");
+        jLabel1.setText("Alterar CRT");
 
         btSair.setBackground(new java.awt.Color(0, 2, 61));
         btSair.setBorder(null);
@@ -154,15 +154,15 @@ public class FrmCrtAlterar extends javax.swing.JDialog {
             }
         });
 
-        txtDescFabricanteProduto.setForeground(new java.awt.Color(0, 2, 61));
-        txtDescFabricanteProduto.setToolTipText("Digite a descrição do fabricante");
-        txtDescFabricanteProduto.setBorderColor(new java.awt.Color(0, 2, 61));
-        txtDescFabricanteProduto.setBotonColor(new java.awt.Color(0, 2, 61));
-        txtDescFabricanteProduto.setPhColor(new java.awt.Color(0, 2, 61));
-        txtDescFabricanteProduto.setPlaceholder("Digite a descrição do fabricante");
-        txtDescFabricanteProduto.addActionListener(new java.awt.event.ActionListener() {
+        txtDescCrt.setForeground(new java.awt.Color(0, 2, 61));
+        txtDescCrt.setToolTipText("Digite a descrição do CRT");
+        txtDescCrt.setBorderColor(new java.awt.Color(0, 2, 61));
+        txtDescCrt.setBotonColor(new java.awt.Color(0, 2, 61));
+        txtDescCrt.setPhColor(new java.awt.Color(0, 2, 61));
+        txtDescCrt.setPlaceholder("Digite a descrição do CRT");
+        txtDescCrt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDescFabricanteProdutoActionPerformed(evt);
+                txtDescCrtActionPerformed(evt);
             }
         });
 
@@ -174,7 +174,7 @@ public class FrmCrtAlterar extends javax.swing.JDialog {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtDescFabricanteProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDescCrt, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(btAlterarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -189,7 +189,7 @@ public class FrmCrtAlterar extends javax.swing.JDialog {
                 .addGap(7, 7, 7)
                 .addComponent(chkStatus)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtDescFabricanteProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtDescCrt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btAlterarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -197,7 +197,7 @@ public class FrmCrtAlterar extends javax.swing.JDialog {
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        txtDescFabricanteProduto.getAccessibleContext().setAccessibleName("");
+        txtDescCrt.getAccessibleContext().setAccessibleName("");
 
         rSPanelShadow1.add(jPanel2, java.awt.BorderLayout.CENTER);
 
@@ -209,16 +209,16 @@ public class FrmCrtAlterar extends javax.swing.JDialog {
 
     public void atualizaTabela() {
 
-        frmFabricante frmFabProd = (frmFabricante) parente;
-        frmFabProd.atualizaTabela();
+        frmTributos frmCrt = (frmTributos) parente;
+        frmCrt.atualizaTabelaCrt();
     }
 
-    public void preencherCampos(int idFabProd, String descFabProd, String statusFabProd) {
+    public void preencherCampos(int idCrt, String descCrt, String statusCrt) {
 
-        id_Fab_Prod = idFabProd;
-        txtDescFabricanteProduto.setText(descFabProd);
-        if (statusFabProd.equals("ativo")) {
-            status_Fab_Prod = statusFabProd;
+        id_Crt = idCrt;
+        txtDescCrt.setText(descCrt);
+        if (statusCrt.equals("ativo")) {
+            status_Crt = statusCrt;
             chkStatus.setSelected(true);
         } else {
             chkStatus.setSelected(false);
@@ -245,10 +245,10 @@ public class FrmCrtAlterar extends javax.swing.JDialog {
     public void verificarRegistro() {
 
         conBanco.conexao();
-        conBanco.executaSQL("Select * from tab_fabricante_produto where desc_fab_prod ='" + txtDescFabricanteProduto.getText() + "'");
+        conBanco.executaSQL("Select * from tab_crt where desc_crt ='" + txtDescCrt.getText() + "'");
         try {
             conBanco.rs.first();
-            desc_Fab_Prod = conBanco.rs.getString("desc_fab_prod");
+            desc_Crt = conBanco.rs.getString("desc_crt");
         } catch (SQLException ex) {
         }
         conBanco.desconecta();
@@ -256,16 +256,16 @@ public class FrmCrtAlterar extends javax.swing.JDialog {
 
     public void atualizarRegistro() {
 
-        if (txtDescFabricanteProduto.getText().equals("")) {
-            JOptionPane.showMessageDialog(rootPane, "Digite a descrição do fabricante!!");
-            txtDescFabricanteProduto.requestFocus();
+        if (txtDescCrt.getText().equals("")) {
+            JOptionPane.showMessageDialog(rootPane, "Digite a descrição do CRT!!");
+            txtDescCrt.requestFocus();
         } else {
             verificarRegistro();
-            if (txtDescFabricanteProduto.getText().equals((String) desc_Fab_Prod)) {
+            if (txtDescCrt.getText().equals((String) desc_Crt)) {
                 JOptionPane.showMessageDialog(rootPane, "Não é possível realizar essa alteração pois já existe esse nome registrado no sistema!!");
-            txtDescFabricanteProduto.requestFocus();
+            txtDescCrt.requestFocus();
             } else {
-                crudFabProd.AlterarFabricanteProduto(id_Fab_Prod, txtDescFabricanteProduto.getText(), status_Fab_Prod);
+                crudCrt.AlterarCrt(id_Crt, txtDescCrt.getText(), status_Crt);
                 atualizaTabela();
                 dispose();
             }
@@ -298,16 +298,16 @@ public class FrmCrtAlterar extends javax.swing.JDialog {
     private void chkStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkStatusActionPerformed
 
         if (!chkStatus.isSelected()) {
-            status_Fab_Prod = "não ativo";
+            status_Crt = "não ativo";
         } else {
-            status_Fab_Prod = "ativo";
+            status_Crt = "ativo";
         }
     }//GEN-LAST:event_chkStatusActionPerformed
 
-    private void txtDescFabricanteProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescFabricanteProdutoActionPerformed
+    private void txtDescCrtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescCrtActionPerformed
 
         atualizarRegistro();
-    }//GEN-LAST:event_txtDescFabricanteProdutoActionPerformed
+    }//GEN-LAST:event_txtDescCrtActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private rojeru_san.RSButtonRiple btAlterarRegistro;
@@ -321,6 +321,6 @@ public class FrmCrtAlterar extends javax.swing.JDialog {
     private rojerusan.RSLabelVerticalD rSLabelVerticalD1;
     private rojerusan.RSLabelVerticalD rSLabelVerticalD2;
     private rojeru_san.RSPanelShadow rSPanelShadow1;
-    private rojerusan.RSMetroTextPlaceHolder txtDescFabricanteProduto;
+    private rojerusan.RSMetroTextPlaceHolder txtDescCrt;
     // End of variables declaration//GEN-END:variables
 }
