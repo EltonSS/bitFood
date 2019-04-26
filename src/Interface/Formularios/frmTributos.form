@@ -90,7 +90,7 @@
               <Border info="null"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagem/BotoesFormularios/Editar Registro.png"/>
+              <Image iconType="3" name="/Imagem/BotoesFormularios/Novo Registro.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Inserir NCM"/>
             <Property name="toolTipText" type="java.lang.String" value="Novo Registro"/>

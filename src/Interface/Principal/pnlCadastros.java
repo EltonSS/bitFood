@@ -16,10 +16,10 @@ public class pnlCadastros extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
-        rSButtonMetro5 = new rojerusan.RSButtonMetro();
+        btUsuarios = new rojerusan.RSButtonMetro();
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
-        rSButtonMetro6 = new rojerusan.RSButtonMetro();
+        btClientes = new rojerusan.RSButtonMetro();
         jLabel31 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -32,11 +32,14 @@ public class pnlCadastros extends javax.swing.JPanel {
         rSButtonMetro9 = new rojerusan.RSButtonMetro();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
-        rSButtonMetro10 = new rojerusan.RSButtonMetro();
+        btFornecedores = new rojerusan.RSButtonMetro();
         jLabel39 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
-        rSButtonMetro7 = new rojerusan.RSButtonMetro();
+        btEnderecos = new rojerusan.RSButtonMetro();
         jLabel33 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        btEnderecos1 = new rojerusan.RSButtonMetro();
+        jLabel41 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1380, 480));
@@ -87,17 +90,17 @@ public class pnlCadastros extends javax.swing.JPanel {
         jLabel28.setOpaque(true);
         add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 55, 120, 30));
 
-        rSButtonMetro5.setBackground(new java.awt.Color(255, 255, 255));
-        rSButtonMetro5.setForeground(new java.awt.Color(255, 0, 0));
-        rSButtonMetro5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Usuario.png"))); // NOI18N
-        rSButtonMetro5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rSButtonMetro5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        rSButtonMetro5.addActionListener(new java.awt.event.ActionListener() {
+        btUsuarios.setBackground(new java.awt.Color(255, 255, 255));
+        btUsuarios.setForeground(new java.awt.Color(255, 0, 0));
+        btUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Usuario.png"))); // NOI18N
+        btUsuarios.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btUsuarios.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSButtonMetro5ActionPerformed(evt);
+                btUsuariosActionPerformed(evt);
             }
         });
-        add(rSButtonMetro5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 87, 120, 120));
+        add(btUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 87, 120, 120));
 
         jLabel29.setBackground(new java.awt.Color(153, 153, 153));
         jLabel29.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
@@ -116,12 +119,12 @@ public class pnlCadastros extends javax.swing.JPanel {
         jLabel30.setOpaque(true);
         add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 55, 120, 30));
 
-        rSButtonMetro6.setBackground(new java.awt.Color(255, 255, 255));
-        rSButtonMetro6.setForeground(new java.awt.Color(255, 0, 0));
-        rSButtonMetro6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Cliente.png"))); // NOI18N
-        rSButtonMetro6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rSButtonMetro6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        add(rSButtonMetro6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 87, 120, 120));
+        btClientes.setBackground(new java.awt.Color(255, 255, 255));
+        btClientes.setForeground(new java.awt.Color(255, 0, 0));
+        btClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Cliente.png"))); // NOI18N
+        btClientes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btClientes.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(btClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 87, 120, 120));
 
         jLabel31.setBackground(new java.awt.Color(153, 153, 153));
         jLabel31.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
@@ -228,12 +231,12 @@ public class pnlCadastros extends javax.swing.JPanel {
         jLabel38.setOpaque(true);
         jPanel3.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 55, 120, 30));
 
-        rSButtonMetro10.setBackground(new java.awt.Color(255, 255, 255));
-        rSButtonMetro10.setForeground(new java.awt.Color(255, 0, 0));
-        rSButtonMetro10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Cliente.png"))); // NOI18N
-        rSButtonMetro10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rSButtonMetro10.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jPanel3.add(rSButtonMetro10, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 87, 120, 120));
+        btFornecedores.setBackground(new java.awt.Color(255, 255, 255));
+        btFornecedores.setForeground(new java.awt.Color(255, 0, 0));
+        btFornecedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Cliente.png"))); // NOI18N
+        btFornecedores.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btFornecedores.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel3.add(btFornecedores, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 87, 120, 120));
 
         jLabel39.setBackground(new java.awt.Color(153, 153, 153));
         jLabel39.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
@@ -252,12 +255,12 @@ public class pnlCadastros extends javax.swing.JPanel {
         jLabel32.setOpaque(true);
         jPanel3.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 55, 120, 30));
 
-        rSButtonMetro7.setBackground(new java.awt.Color(255, 255, 255));
-        rSButtonMetro7.setForeground(new java.awt.Color(255, 0, 0));
-        rSButtonMetro7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Cliente.png"))); // NOI18N
-        rSButtonMetro7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rSButtonMetro7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jPanel3.add(rSButtonMetro7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 87, 120, 120));
+        btEnderecos.setBackground(new java.awt.Color(255, 255, 255));
+        btEnderecos.setForeground(new java.awt.Color(255, 0, 0));
+        btEnderecos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Cliente.png"))); // NOI18N
+        btEnderecos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btEnderecos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel3.add(btEnderecos, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 87, 120, 120));
 
         jLabel33.setBackground(new java.awt.Color(153, 153, 153));
         jLabel33.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
@@ -267,16 +270,45 @@ public class pnlCadastros extends javax.swing.JPanel {
         jLabel33.setOpaque(true);
         jPanel3.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 208, 120, 20));
 
+        jLabel40.setBackground(new java.awt.Color(0, 102, 102));
+        jLabel40.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel40.setText("Empresa");
+        jLabel40.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel40.setOpaque(true);
+        jPanel3.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 55, 120, 30));
+
+        btEnderecos1.setBackground(new java.awt.Color(255, 255, 255));
+        btEnderecos1.setForeground(new java.awt.Color(255, 0, 0));
+        btEnderecos1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Cliente.png"))); // NOI18N
+        btEnderecos1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btEnderecos1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel3.add(btEnderecos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 87, 120, 120));
+
+        jLabel41.setBackground(new java.awt.Color(153, 153, 153));
+        jLabel41.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel41.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel41.setOpaque(true);
+        jPanel3.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 208, 120, 20));
+
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void rSButtonMetro5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonMetro5ActionPerformed
+    private void btUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btUsuariosActionPerformed
         
         frmUsuario frmUsu = new frmUsuario(null, true, null);
         frmUsu.setVisible(true);
-    }//GEN-LAST:event_rSButtonMetro5ActionPerformed
+    }//GEN-LAST:event_btUsuariosActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private rojerusan.RSButtonMetro btClientes;
+    private rojerusan.RSButtonMetro btEnderecos;
+    private rojerusan.RSButtonMetro btEnderecos1;
+    private rojerusan.RSButtonMetro btFornecedores;
+    private rojerusan.RSButtonMetro btUsuarios;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel28;
@@ -291,15 +323,13 @@ public class pnlCadastros extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private rojerusan.RSButtonMetro rSButtonMetro10;
-    private rojerusan.RSButtonMetro rSButtonMetro5;
-    private rojerusan.RSButtonMetro rSButtonMetro6;
-    private rojerusan.RSButtonMetro rSButtonMetro7;
     private rojerusan.RSButtonMetro rSButtonMetro8;
     private rojerusan.RSButtonMetro rSButtonMetro9;
     // End of variables declaration//GEN-END:variables

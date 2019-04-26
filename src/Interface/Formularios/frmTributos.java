@@ -28,6 +28,7 @@ import Interface.Formularios.Registrar.frmCsosnRegistrar;
 import Interface.Formularios.Registrar.frmCstRegistrar;
 import Interface.Formularios.Registrar.frmBcIcmsRegistrar;
 import Interface.Formularios.Registrar.frmBcIcmsStRegistrar;
+import Interface.Formularios.Registrar.frmNcmRegistrar;
 import javax.swing.JDialog;
 import rojerusan.RSTableMetro;
 
@@ -209,7 +210,7 @@ public final class frmTributos extends javax.swing.JDialog {
 
         btInserirRegistroNcm.setBackground(new java.awt.Color(0, 2, 61));
         btInserirRegistroNcm.setBorder(null);
-        btInserirRegistroNcm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/BotoesFormularios/Editar Registro.png"))); // NOI18N
+        btInserirRegistroNcm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/BotoesFormularios/Novo Registro.png"))); // NOI18N
         btInserirRegistroNcm.setText("Inserir NCM");
         btInserirRegistroNcm.setToolTipText("Novo Registro");
         btInserirRegistroNcm.setColorHover(new java.awt.Color(1, 6, 167));
@@ -1439,7 +1440,7 @@ public final class frmTributos extends javax.swing.JDialog {
             num = 0;
         }
         if (num == 0) {
-            preencherTabelaCest(" select * from tab_cest where num_cest like '%" + txtConsultarRegistroCest.getText() + "%' and status_cest = 'ativo'");
+            JOptionPane.showMessageDialog(null, "Por favor didgite o número do CEST!!");
             num = 1;
         } else {
             if (num == 1) {
@@ -1456,11 +1457,11 @@ public final class frmTributos extends javax.swing.JDialog {
             num = 0;
         }
         if (num == 0) {
-            preencherTabelaOrigemMercadoria(" select * from tab_origem_mercadoria where num_cest like '%" + txtConsultarRegistroOrigemMercadoria.getText() + "%' and status_org_merc = 'ativo'");
+            preencherTabelaOrigemMercadoria(" select * from tab_origem_mercadoria where desc_org_merc like '%" + txtConsultarRegistroOrigemMercadoria.getText() + "%' and status_org_merc = 'ativo'");
             num = 1;
         } else {
             if (num == 1) {
-                preencherTabelaOrigemMercadoria(" select * from tab_origem_mercadoria where id_cest like '%" + txtConsultarRegistroOrigemMercadoria.getText() + "%' and status_org_merc = 'ativo' ");
+                preencherTabelaOrigemMercadoria(" select * from tab_origem_mercadoria where id_org_merc like '%" + txtConsultarRegistroOrigemMercadoria.getText() + "%' and status_org_merc = 'ativo' ");
             }
         }
     }
@@ -1805,8 +1806,8 @@ public final class frmTributos extends javax.swing.JDialog {
 
     public void chamarFormularioAtualizarCest() {
 
-        String descCest = "" + tabelaCest.getValueAt(tabelaCest.getSelectedRow(), 0);
-        crudCest.ConsultarCest(descCest);
+        String numCest = "" + tabelaCest.getValueAt(tabelaCest.getSelectedRow(), 0);
+        crudCest.ConsultarCest(numCest);
         num_Cest = crudCest.getNum_Cest();
         status_Cest = crudCest.getStatus_Cest();
         id_Cest = crudCest.getId_Cest();
@@ -1976,14 +1977,14 @@ public final class frmTributos extends javax.swing.JDialog {
     }//GEN-LAST:event_btNovoRegistroBcIcmsActionPerformed
 
     private void txtConsultarRegistroBcIcmsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtConsultarRegistroBcIcmsKeyReleased
-               
+
     }//GEN-LAST:event_txtConsultarRegistroBcIcmsKeyReleased
 
     private void tabelaBcIcmsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaBcIcmsMouseClicked
-        
+
         if (evt.getClickCount() > 1) {
             chamarFormularioAtualizarBcIcms();
-        }        
+        }
     }//GEN-LAST:event_tabelaBcIcmsMouseClicked
 
     private void btNovoRegistroBcIcmsStActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNovoRegistroBcIcmsStActionPerformed
@@ -1997,10 +1998,10 @@ public final class frmTributos extends javax.swing.JDialog {
     }//GEN-LAST:event_txtConsultarRegistroBcIcmsStKeyReleased
 
     private void tabelaBcIcmsStMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaBcIcmsStMouseClicked
-        
-         if (evt.getClickCount() > 1) {
+
+        if (evt.getClickCount() > 1) {
             chamarFormularioAtualizarBcIcmsSt();
-        }  
+        }
     }//GEN-LAST:event_tabelaBcIcmsStMouseClicked
 
     private void btDeletarRegistro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDeletarRegistro1ActionPerformed
@@ -2136,7 +2137,10 @@ public final class frmTributos extends javax.swing.JDialog {
     }//GEN-LAST:event_tabelaIcmsSt3MouseClicked
 
     private void btInserirRegistroNcmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btInserirRegistroNcmActionPerformed
-        // TODO add your handling code here:
+
+        String numCest = "" + tabelaCest.getValueAt(tabelaCest.getSelectedRow(), 0);
+        frmNcmRegistrar frmNcmRegistrar = new frmNcmRegistrar(null, true, this, numCest);
+        frmNcmRegistrar.setVisible(true);
     }//GEN-LAST:event_btInserirRegistroNcmActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -21,6 +21,8 @@ public final class FrmUsuarioAlterar extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         this.parente = p;
+        nome_usuario = nomeUsu;
+        login_usuario = loginUsu;
         txtNomeUsuario.requestFocus();
         cbFuncaoUsuario();
         cbPermissaoUsuario();
@@ -44,7 +46,7 @@ public final class FrmUsuarioAlterar extends javax.swing.JDialog {
         chkStatus = new javax.swing.JCheckBox();
         txtNomeUsuario = new rojerusan.RSMetroTextPlaceHolder();
         cbFuncaoUsuario = new rojerusan.RSComboMetro();
-        txtLoginAcessoUsuario = new rojerusan.RSMetroTextPlaceHolder();
+        txtLoginUsuario = new rojerusan.RSMetroTextPlaceHolder();
         txtPwdAcessoUsuario = new rojerusan.RSPasswordTextPlaceHolder();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -183,15 +185,15 @@ public final class FrmUsuarioAlterar extends javax.swing.JDialog {
         cbFuncaoUsuario.setFocusTraversalPolicyProvider(true);
         cbFuncaoUsuario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
-        txtLoginAcessoUsuario.setForeground(new java.awt.Color(0, 2, 61));
-        txtLoginAcessoUsuario.setToolTipText("Digite o login do usuário");
-        txtLoginAcessoUsuario.setBorderColor(new java.awt.Color(0, 2, 61));
-        txtLoginAcessoUsuario.setBotonColor(new java.awt.Color(0, 2, 61));
-        txtLoginAcessoUsuario.setPhColor(new java.awt.Color(0, 2, 61));
-        txtLoginAcessoUsuario.setPlaceholder("Digite o login de acesso");
-        txtLoginAcessoUsuario.addActionListener(new java.awt.event.ActionListener() {
+        txtLoginUsuario.setForeground(new java.awt.Color(0, 2, 61));
+        txtLoginUsuario.setToolTipText("Digite o login do usuário");
+        txtLoginUsuario.setBorderColor(new java.awt.Color(0, 2, 61));
+        txtLoginUsuario.setBotonColor(new java.awt.Color(0, 2, 61));
+        txtLoginUsuario.setPhColor(new java.awt.Color(0, 2, 61));
+        txtLoginUsuario.setPlaceholder("Digite o login do usuário");
+        txtLoginUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtLoginAcessoUsuarioActionPerformed(evt);
+                txtLoginUsuarioActionPerformed(evt);
             }
         });
 
@@ -226,7 +228,7 @@ public final class FrmUsuarioAlterar extends javax.swing.JDialog {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtLoginAcessoUsuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtLoginUsuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtNomeUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -258,7 +260,7 @@ public final class FrmUsuarioAlterar extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cbFuncaoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtLoginAcessoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtLoginUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -293,7 +295,7 @@ public final class FrmUsuarioAlterar extends javax.swing.JDialog {
         id_Usu = idUsu;
         txtNomeUsuario.setText(nomeUsu);
         cbFuncaoUsuario.setSelectedItem(descFunc);
-        txtLoginAcessoUsuario.setText(loginUsu);
+        txtLoginUsuario.setText(loginUsu);
         txtPwdAcessoUsuario.setText(senhaUsu);
         cbPermissaoUsuario.setSelectedItem(descPrm);
         if (statusUsu.equals("ativo")) {
@@ -357,8 +359,10 @@ public final class FrmUsuarioAlterar extends javax.swing.JDialog {
 
     public void verificarRegistro() {
 
+        //" select * from tab_formulario frm where not exists (select * from tab_itens_permissao iPrm where frm.id_frm = iPrm.id_frm and iPrm.status_it_prm = 'ativo' and iPrm.id_prm ='" + idPrm + "')"
         conBanco.conexao();
         conBanco.executaSQL("Select * from tab_usuario where nome_usu ='" + txtNomeUsuario.getText() + "'");
+//        conBanco.executaSQL("Select * from tab_usuario where not exists nome_usu ='" + txtNomeUsuario.getText() + "'");
         try {
             conBanco.rs.first();
             nome_Usu = conBanco.rs.getString("nome_usu");
@@ -378,9 +382,9 @@ public final class FrmUsuarioAlterar extends javax.swing.JDialog {
                 JOptionPane.showMessageDialog(rootPane, "Escolha a função do usuário!!");
                 cbFuncaoUsuario.requestFocus();
             } else {
-                if (txtLoginAcessoUsuario.getText().equals("")) {
+                if (txtLoginUsuario.getText().equals("")) {
                     JOptionPane.showMessageDialog(rootPane, "Digite o login do usuário!!");
-                    txtLoginAcessoUsuario.requestFocus();
+                    txtLoginUsuario.requestFocus();
                 } else {
                     if (txtPwdAcessoUsuario.getText().equals("")) {
                         JOptionPane.showMessageDialog(rootPane, "Digite a senha do usuário!!");
@@ -390,28 +394,44 @@ public final class FrmUsuarioAlterar extends javax.swing.JDialog {
                             JOptionPane.showMessageDialog(rootPane, "Escolha a permissão do usuário!!");
                             cbPermissaoUsuario.requestFocus();
                         } else {
-                            verificarRegistro();                            
-                                if (txtNomeUsuario.getText().equals((String) nome_Usu)) {
-                                    JOptionPane.showMessageDialog(rootPane, "Não é possível realizar essa alteração pois já existe esse nome registrado no sistema!!");
-                                    txtNomeUsuario.requestFocus();
-                                } else {
-                                    if (txtLoginAcessoUsuario.getText().equals((String) login_Usu)) {
-                                        JOptionPane.showMessageDialog(rootPane, "Esse login já está cadastro no sistema, por favor digite outro login válido!! ");
-                                        txtLoginAcessoUsuario.requestFocus();
-                                    } else {
-                                        crudUsu.AlterarUsuario(id_Usu, txtNomeUsuario.getText(), txtLoginAcessoUsuario.getText(), txtPwdAcessoUsuario.getText(),
-                                                (String) cbFuncaoUsuario.getSelectedItem(), (String) cbPermissaoUsuario.getSelectedItem(), status_Usu);
-                                        atualizaTabela();
-                                        dispose();
-                                    }
-                                }
+//                            verificarRegistro();
+//                            if (nome_usuario.equals((String) txtNomeUsuario.getText()) && login_usuario.equals((String) txtLoginUsuario.getText())) {
+//                                crudUsu.AlterarUsuario(id_Usu, txtNomeUsuario.getText(), txtLoginUsuario.getText(), txtPwdAcessoUsuario.getText(),
+//                                        (String) cbFuncaoUsuario.getSelectedItem(), (String) cbPermissaoUsuario.getSelectedItem(), status_Usu);
+//                                atualizaTabela();
+//                                dispose();
+//                            } else {
+//                                if (nome_usuario.equals((String) txtNomeUsuario.getText())) {
+//                                    if (txtNomeUsuario.getText().equals((String) nome_Usu)) {
+//                                        JOptionPane.showMessageDialog(rootPane, "Não é possível realizar essa alteração pois jé existe " + nome_Usu + " registrado no sistema!!");
+//                                        txtNomeUsuario.requestFocus();
+//                                    }
+//                                } else {
+//                                }
+//
+//                            }
+//
+//                            if (txtNomeUsuario.getText().equals((String) nome_Usu)) {
+//                                JOptionPane.showMessageDialog(rootPane, "Não é possível realizar essa alteração pois jé existe " + nome_Usu + " registrado no sistema!!");
+//                                txtNomeUsuario.requestFocus();
+//                            } else {
+//                                if (txtLoginUsuario.getText().equals((String) login_Usu)) {
+//                                    JOptionPane.showMessageDialog(rootPane, "Não é possível realizar essa alteração pois jé existe " + login_Usu + " registrado no sistema!!");
+//                                    txtLoginUsuario.requestFocus();
+//                                } else {
+                                    crudUsu.AlterarUsuario(id_Usu, txtNomeUsuario.getText(), txtLoginUsuario.getText(), txtPwdAcessoUsuario.getText(),
+                                            (String) cbFuncaoUsuario.getSelectedItem(), (String) cbPermissaoUsuario.getSelectedItem(), status_Usu);
+                                    atualizaTabela();
+                                    dispose();
+//                                }
+//                            }
 
-                            }
                         }
                     }
                 }
             }
         }
+    }
 
     private void btAlterarRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAlterarRegistroActionPerformed
 
@@ -450,10 +470,10 @@ public final class FrmUsuarioAlterar extends javax.swing.JDialog {
         atualizarRegistro();
     }//GEN-LAST:event_txtNomeUsuarioActionPerformed
 
-    private void txtLoginAcessoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginAcessoUsuarioActionPerformed
+    private void txtLoginUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginUsuarioActionPerformed
 
         atualizarRegistro();
-    }//GEN-LAST:event_txtLoginAcessoUsuarioActionPerformed
+    }//GEN-LAST:event_txtLoginUsuarioActionPerformed
 
     private void txtPwdAcessoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPwdAcessoUsuarioActionPerformed
 
@@ -476,7 +496,7 @@ public final class FrmUsuarioAlterar extends javax.swing.JDialog {
     private rojerusan.RSLabelVerticalD rSLabelVerticalD1;
     private rojerusan.RSLabelVerticalD rSLabelVerticalD2;
     private rojeru_san.RSPanelShadow rSPanelShadow1;
-    private rojerusan.RSMetroTextPlaceHolder txtLoginAcessoUsuario;
+    private rojerusan.RSMetroTextPlaceHolder txtLoginUsuario;
     private rojerusan.RSMetroTextPlaceHolder txtNomeUsuario;
     private rojerusan.RSPasswordTextPlaceHolder txtPwdAcessoUsuario;
     // End of variables declaration//GEN-END:variables

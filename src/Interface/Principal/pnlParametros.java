@@ -20,35 +20,35 @@ public class pnlParametros extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        rSButtonMetro9 = new rojerusan.RSButtonMetro();
+        btImpressoras = new rojerusan.RSButtonMetro();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
-        rSButtonMetro6 = new rojerusan.RSButtonMetro();
-        rSButtonMetro5 = new rojerusan.RSButtonMetro();
+        btFormulario = new rojerusan.RSButtonMetro();
+        btFuncaUsuarios = new rojerusan.RSButtonMetro();
         rSButtonMetro10 = new rojerusan.RSButtonMetro();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
-        rSButtonMetro7 = new rojerusan.RSButtonMetro();
+        btPermissaoUsuario = new rojerusan.RSButtonMetro();
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
-        rSButtonMetro8 = new rojerusan.RSButtonMetro();
+        btFabricante = new rojerusan.RSButtonMetro();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
-        rSButtonMetro11 = new rojerusan.RSButtonMetro();
+        btUnidadeMedida = new rojerusan.RSButtonMetro();
         jLabel47 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
-        rSButtonMetro12 = new rojerusan.RSButtonMetro();
+        btMesas = new rojerusan.RSButtonMetro();
         jLabel49 = new javax.swing.JLabel();
         jLabel50 = new javax.swing.JLabel();
-        rSButtonMetro13 = new rojerusan.RSButtonMetro();
+        btBancoDados = new rojerusan.RSButtonMetro();
         jLabel51 = new javax.swing.JLabel();
         jLabel52 = new javax.swing.JLabel();
-        rSButtonMetro14 = new rojerusan.RSButtonMetro();
+        btLicencaSistema = new rojerusan.RSButtonMetro();
         jLabel53 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -57,7 +57,7 @@ public class pnlParametros extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
         jLabel1.setText("PARÂMETROS DO SISTEMA");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 240, 30));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 340, 30));
 
         jPanel1.setBackground(new java.awt.Color(0, 2, 61));
         jPanel1.setPreferredSize(new java.awt.Dimension(1370, 3));
@@ -91,12 +91,12 @@ public class pnlParametros extends javax.swing.JPanel {
 
         add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 1313, 2));
 
-        rSButtonMetro9.setBackground(new java.awt.Color(255, 255, 255));
-        rSButtonMetro9.setForeground(new java.awt.Color(255, 0, 0));
-        rSButtonMetro9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Impressora Fiscal.png"))); // NOI18N
-        rSButtonMetro9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rSButtonMetro9.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        add(rSButtonMetro9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 120, 120));
+        btImpressoras.setBackground(new java.awt.Color(255, 255, 255));
+        btImpressoras.setForeground(new java.awt.Color(255, 0, 0));
+        btImpressoras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Impressora Fiscal.png"))); // NOI18N
+        btImpressoras.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btImpressoras.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(btImpressoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 120, 120));
 
         jLabel36.setBackground(new java.awt.Color(113, 113, 18));
         jLabel36.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
@@ -133,29 +133,29 @@ public class pnlParametros extends javax.swing.JPanel {
         jLabel35.setOpaque(true);
         add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 55, 120, 30));
 
-        rSButtonMetro6.setBackground(new java.awt.Color(255, 255, 255));
-        rSButtonMetro6.setForeground(new java.awt.Color(255, 0, 0));
-        rSButtonMetro6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Formulario.png"))); // NOI18N
-        rSButtonMetro6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rSButtonMetro6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        rSButtonMetro6.addActionListener(new java.awt.event.ActionListener() {
+        btFormulario.setBackground(new java.awt.Color(255, 255, 255));
+        btFormulario.setForeground(new java.awt.Color(255, 0, 0));
+        btFormulario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Formulario.png"))); // NOI18N
+        btFormulario.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btFormulario.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btFormulario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSButtonMetro6ActionPerformed(evt);
+                btFormularioActionPerformed(evt);
             }
         });
-        add(rSButtonMetro6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 87, 120, 120));
+        add(btFormulario, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 87, 120, 120));
 
-        rSButtonMetro5.setBackground(new java.awt.Color(255, 255, 255));
-        rSButtonMetro5.setForeground(new java.awt.Color(255, 0, 0));
-        rSButtonMetro5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Funcao Usuario.png"))); // NOI18N
-        rSButtonMetro5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rSButtonMetro5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        rSButtonMetro5.addActionListener(new java.awt.event.ActionListener() {
+        btFuncaUsuarios.setBackground(new java.awt.Color(255, 255, 255));
+        btFuncaUsuarios.setForeground(new java.awt.Color(255, 0, 0));
+        btFuncaUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Funcao Usuario.png"))); // NOI18N
+        btFuncaUsuarios.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btFuncaUsuarios.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btFuncaUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSButtonMetro5ActionPerformed(evt);
+                btFuncaUsuariosActionPerformed(evt);
             }
         });
-        add(rSButtonMetro5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 87, 120, 120));
+        add(btFuncaUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 87, 120, 120));
 
         rSButtonMetro10.setBackground(new java.awt.Color(255, 255, 255));
         rSButtonMetro10.setForeground(new java.awt.Color(255, 0, 0));
@@ -181,17 +181,17 @@ public class pnlParametros extends javax.swing.JPanel {
         jLabel39.setOpaque(true);
         add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 120, 20));
 
-        rSButtonMetro7.setBackground(new java.awt.Color(255, 255, 255));
-        rSButtonMetro7.setForeground(new java.awt.Color(255, 0, 0));
-        rSButtonMetro7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Permissao.png"))); // NOI18N
-        rSButtonMetro7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rSButtonMetro7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        rSButtonMetro7.addActionListener(new java.awt.event.ActionListener() {
+        btPermissaoUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        btPermissaoUsuario.setForeground(new java.awt.Color(255, 0, 0));
+        btPermissaoUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Permissao.png"))); // NOI18N
+        btPermissaoUsuario.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btPermissaoUsuario.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btPermissaoUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSButtonMetro7ActionPerformed(evt);
+                btPermissaoUsuarioActionPerformed(evt);
             }
         });
-        add(rSButtonMetro7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 87, 120, 120));
+        add(btPermissaoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 87, 120, 120));
 
         jLabel40.setBackground(new java.awt.Color(153, 153, 153));
         jLabel40.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
@@ -219,17 +219,17 @@ public class pnlParametros extends javax.swing.JPanel {
         jLabel42.setOpaque(true);
         add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 55, 120, 30));
 
-        rSButtonMetro8.setBackground(new java.awt.Color(255, 255, 255));
-        rSButtonMetro8.setForeground(new java.awt.Color(255, 0, 0));
-        rSButtonMetro8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Fabricante.png"))); // NOI18N
-        rSButtonMetro8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rSButtonMetro8.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        rSButtonMetro8.addActionListener(new java.awt.event.ActionListener() {
+        btFabricante.setBackground(new java.awt.Color(255, 255, 255));
+        btFabricante.setForeground(new java.awt.Color(255, 0, 0));
+        btFabricante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Fabricante.png"))); // NOI18N
+        btFabricante.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btFabricante.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btFabricante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSButtonMetro8ActionPerformed(evt);
+                btFabricanteActionPerformed(evt);
             }
         });
-        add(rSButtonMetro8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 87, 120, 120));
+        add(btFabricante, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 87, 120, 120));
 
         jLabel43.setBackground(new java.awt.Color(153, 153, 153));
         jLabel43.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
@@ -264,17 +264,17 @@ public class pnlParametros extends javax.swing.JPanel {
         jLabel46.setOpaque(true);
         add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 55, 120, 30));
 
-        rSButtonMetro11.setBackground(new java.awt.Color(255, 255, 255));
-        rSButtonMetro11.setForeground(new java.awt.Color(255, 0, 0));
-        rSButtonMetro11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Unidade Medida.png"))); // NOI18N
-        rSButtonMetro11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rSButtonMetro11.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        rSButtonMetro11.addActionListener(new java.awt.event.ActionListener() {
+        btUnidadeMedida.setBackground(new java.awt.Color(255, 255, 255));
+        btUnidadeMedida.setForeground(new java.awt.Color(255, 0, 0));
+        btUnidadeMedida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Unidade Medida.png"))); // NOI18N
+        btUnidadeMedida.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btUnidadeMedida.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btUnidadeMedida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSButtonMetro11ActionPerformed(evt);
+                btUnidadeMedidaActionPerformed(evt);
             }
         });
-        add(rSButtonMetro11, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 87, 120, 120));
+        add(btUnidadeMedida, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 87, 120, 120));
 
         jLabel47.setBackground(new java.awt.Color(153, 153, 153));
         jLabel47.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
@@ -292,23 +292,23 @@ public class pnlParametros extends javax.swing.JPanel {
         jLabel48.setOpaque(true);
         add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 208, 120, 20));
 
-        rSButtonMetro12.setBackground(new java.awt.Color(255, 255, 255));
-        rSButtonMetro12.setForeground(new java.awt.Color(255, 0, 0));
-        rSButtonMetro12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Fabricante.png"))); // NOI18N
-        rSButtonMetro12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rSButtonMetro12.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        rSButtonMetro12.addActionListener(new java.awt.event.ActionListener() {
+        btMesas.setBackground(new java.awt.Color(255, 255, 255));
+        btMesas.setForeground(new java.awt.Color(255, 0, 0));
+        btMesas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Mesa.png"))); // NOI18N
+        btMesas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btMesas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btMesas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSButtonMetro12ActionPerformed(evt);
+                btMesasActionPerformed(evt);
             }
         });
-        add(rSButtonMetro12, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 87, 120, 120));
+        add(btMesas, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 87, 120, 120));
 
         jLabel49.setBackground(new java.awt.Color(113, 113, 18));
         jLabel49.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
         jLabel49.setForeground(new java.awt.Color(255, 255, 255));
         jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel49.setText("Fabricantes");
+        jLabel49.setText("Mesas");
         jLabel49.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel49.setOpaque(true);
         add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 55, 120, 30));
@@ -322,12 +322,12 @@ public class pnlParametros extends javax.swing.JPanel {
         jLabel50.setOpaque(true);
         add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 120, 30));
 
-        rSButtonMetro13.setBackground(new java.awt.Color(255, 255, 255));
-        rSButtonMetro13.setForeground(new java.awt.Color(255, 0, 0));
-        rSButtonMetro13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Banco Dados.png"))); // NOI18N
-        rSButtonMetro13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rSButtonMetro13.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        add(rSButtonMetro13, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 120, 120));
+        btBancoDados.setBackground(new java.awt.Color(255, 255, 255));
+        btBancoDados.setForeground(new java.awt.Color(255, 0, 0));
+        btBancoDados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Banco Dados.png"))); // NOI18N
+        btBancoDados.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btBancoDados.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(btBancoDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 120, 120));
 
         jLabel51.setBackground(new java.awt.Color(153, 153, 153));
         jLabel51.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
@@ -345,12 +345,12 @@ public class pnlParametros extends javax.swing.JPanel {
         jLabel52.setOpaque(true);
         add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 120, 20));
 
-        rSButtonMetro14.setBackground(new java.awt.Color(255, 255, 255));
-        rSButtonMetro14.setForeground(new java.awt.Color(255, 0, 0));
-        rSButtonMetro14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Licença.png"))); // NOI18N
-        rSButtonMetro14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rSButtonMetro14.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        add(rSButtonMetro14, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, 120, 120));
+        btLicencaSistema.setBackground(new java.awt.Color(255, 255, 255));
+        btLicencaSistema.setForeground(new java.awt.Color(255, 0, 0));
+        btLicencaSistema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Licença.png"))); // NOI18N
+        btLicencaSistema.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btLicencaSistema.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(btLicencaSistema, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, 120, 120));
 
         jLabel53.setBackground(new java.awt.Color(113, 113, 18));
         jLabel53.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
@@ -362,42 +362,51 @@ public class pnlParametros extends javax.swing.JPanel {
         add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, 120, 30));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void rSButtonMetro5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonMetro5ActionPerformed
+    private void btFuncaUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFuncaUsuariosActionPerformed
 
         frmFuncao frmFunc = new frmFuncao(null, true, null);
         frmFunc.setVisible(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_rSButtonMetro5ActionPerformed
+    }//GEN-LAST:event_btFuncaUsuariosActionPerformed
 
-    private void rSButtonMetro6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonMetro6ActionPerformed
+    private void btFormularioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFormularioActionPerformed
 
         frmFormulario frmForm = new frmFormulario(null, true, null);
         frmForm.setVisible(true);
-    }//GEN-LAST:event_rSButtonMetro6ActionPerformed
+    }//GEN-LAST:event_btFormularioActionPerformed
 
-    private void rSButtonMetro7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonMetro7ActionPerformed
+    private void btPermissaoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPermissaoUsuarioActionPerformed
 
         frmPermissao frmPerm = new frmPermissao(null, true, null);
         frmPerm.setVisible(true);
-    }//GEN-LAST:event_rSButtonMetro7ActionPerformed
+    }//GEN-LAST:event_btPermissaoUsuarioActionPerformed
 
-    private void rSButtonMetro8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonMetro8ActionPerformed
+    private void btFabricanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFabricanteActionPerformed
 
         frmFabricante frmFabProd = new frmFabricante(null, true, null);
         frmFabProd.setVisible(true);
-    }//GEN-LAST:event_rSButtonMetro8ActionPerformed
+    }//GEN-LAST:event_btFabricanteActionPerformed
 
-    private void rSButtonMetro11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonMetro11ActionPerformed
+    private void btUnidadeMedidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btUnidadeMedidaActionPerformed
         
         frmUnidadeMedida frmUnidMed = new frmUnidadeMedida(null, true, null);
         frmUnidMed.setVisible(true);
-    }//GEN-LAST:event_rSButtonMetro11ActionPerformed
+    }//GEN-LAST:event_btUnidadeMedidaActionPerformed
 
-    private void rSButtonMetro12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonMetro12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rSButtonMetro12ActionPerformed
+    private void btMesasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMesasActionPerformed
+     
+    }//GEN-LAST:event_btMesasActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private rojerusan.RSButtonMetro btBancoDados;
+    private rojerusan.RSButtonMetro btFabricante;
+    private rojerusan.RSButtonMetro btFormulario;
+    private rojerusan.RSButtonMetro btFuncaUsuarios;
+    private rojerusan.RSButtonMetro btImpressoras;
+    private rojerusan.RSButtonMetro btLicencaSistema;
+    private rojerusan.RSButtonMetro btMesas;
+    private rojerusan.RSButtonMetro btPermissaoUsuario;
+    private rojerusan.RSButtonMetro btUnidadeMedida;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel35;
@@ -422,14 +431,5 @@ public class pnlParametros extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private rojerusan.RSButtonMetro rSButtonMetro10;
-    private rojerusan.RSButtonMetro rSButtonMetro11;
-    private rojerusan.RSButtonMetro rSButtonMetro12;
-    private rojerusan.RSButtonMetro rSButtonMetro13;
-    private rojerusan.RSButtonMetro rSButtonMetro14;
-    private rojerusan.RSButtonMetro rSButtonMetro5;
-    private rojerusan.RSButtonMetro rSButtonMetro6;
-    private rojerusan.RSButtonMetro rSButtonMetro7;
-    private rojerusan.RSButtonMetro rSButtonMetro8;
-    private rojerusan.RSButtonMetro rSButtonMetro9;
     // End of variables declaration//GEN-END:variables
 }

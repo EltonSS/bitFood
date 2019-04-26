@@ -13,13 +13,13 @@ public class pnlAtendimento extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
-        rSButtonMetro5 = new rojerusan.RSButtonMetro();
+        btRestaurante = new rojerusan.RSButtonMetro();
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         rSButtonMetro6 = new rojerusan.RSButtonMetro();
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
-        rSButtonMetro7 = new rojerusan.RSButtonMetro();
+        btDelivery = new rojerusan.RSButtonMetro();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         rSButtonMetro8 = new rojerusan.RSButtonMetro();
@@ -57,17 +57,17 @@ public class pnlAtendimento extends javax.swing.JPanel {
         jLabel28.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel28.setText("Mesas");
+        jLabel28.setText("Restaurante");
         jLabel28.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel28.setOpaque(true);
         add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 55, 120, 30));
 
-        rSButtonMetro5.setBackground(new java.awt.Color(255, 255, 255));
-        rSButtonMetro5.setForeground(new java.awt.Color(255, 0, 0));
-        rSButtonMetro5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Restaurante.png"))); // NOI18N
-        rSButtonMetro5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rSButtonMetro5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        add(rSButtonMetro5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 87, 120, 120));
+        btRestaurante.setBackground(new java.awt.Color(255, 255, 255));
+        btRestaurante.setForeground(new java.awt.Color(255, 0, 0));
+        btRestaurante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Restaurante.png"))); // NOI18N
+        btRestaurante.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btRestaurante.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(btRestaurante, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 87, 120, 120));
 
         jLabel29.setBackground(new java.awt.Color(153, 153, 153));
         jLabel29.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
@@ -110,12 +110,12 @@ public class pnlAtendimento extends javax.swing.JPanel {
         jLabel32.setOpaque(true);
         add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 55, 120, 30));
 
-        rSButtonMetro7.setBackground(new java.awt.Color(255, 255, 255));
-        rSButtonMetro7.setForeground(new java.awt.Color(255, 0, 0));
-        rSButtonMetro7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Delivery.png"))); // NOI18N
-        rSButtonMetro7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rSButtonMetro7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        add(rSButtonMetro7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 87, 120, 120));
+        btDelivery.setBackground(new java.awt.Color(255, 255, 255));
+        btDelivery.setForeground(new java.awt.Color(255, 0, 0));
+        btDelivery.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Delivery.png"))); // NOI18N
+        btDelivery.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btDelivery.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(btDelivery, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 87, 120, 120));
 
         jLabel33.setBackground(new java.awt.Color(153, 153, 153));
         jLabel33.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
@@ -192,6 +192,8 @@ public class pnlAtendimento extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private rojerusan.RSButtonMetro btDelivery;
+    private rojerusan.RSButtonMetro btRestaurante;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
@@ -205,9 +207,7 @@ public class pnlAtendimento extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private rojerusan.RSButtonMetro rSButtonMetro5;
     private rojerusan.RSButtonMetro rSButtonMetro6;
-    private rojerusan.RSButtonMetro rSButtonMetro7;
     private rojerusan.RSButtonMetro rSButtonMetro8;
     private rojerusan.RSButtonMetro rSButtonMetro9;
     // End of variables declaration//GEN-END:variables

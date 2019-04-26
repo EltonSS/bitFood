@@ -16,10 +16,10 @@ public class pnlFiscal extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
-        rSButtonMetro5 = new rojerusan.RSButtonMetro();
+        btTributos = new rojerusan.RSButtonMetro();
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
-        rSButtonMetro6 = new rojerusan.RSButtonMetro();
+        btNotaFiscal = new rojerusan.RSButtonMetro();
         jLabel34 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
         rSButtonMetro7 = new rojerusan.RSButtonMetro();
@@ -83,17 +83,17 @@ public class pnlFiscal extends javax.swing.JPanel {
         jLabel28.setOpaque(true);
         add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 55, 120, 30));
 
-        rSButtonMetro5.setBackground(new java.awt.Color(255, 255, 255));
-        rSButtonMetro5.setForeground(new java.awt.Color(255, 0, 0));
-        rSButtonMetro5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Parametros Tributarios.png"))); // NOI18N
-        rSButtonMetro5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rSButtonMetro5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        rSButtonMetro5.addActionListener(new java.awt.event.ActionListener() {
+        btTributos.setBackground(new java.awt.Color(255, 255, 255));
+        btTributos.setForeground(new java.awt.Color(255, 0, 0));
+        btTributos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Parametros Tributarios.png"))); // NOI18N
+        btTributos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btTributos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btTributos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSButtonMetro5ActionPerformed(evt);
+                btTributosActionPerformed(evt);
             }
         });
-        add(rSButtonMetro5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 87, 120, 120));
+        add(btTributos, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 87, 120, 120));
 
         jLabel32.setBackground(new java.awt.Color(153, 153, 153));
         jLabel32.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
@@ -107,22 +107,22 @@ public class pnlFiscal extends javax.swing.JPanel {
         jLabel33.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(255, 255, 255));
         jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel33.setText("Notas Ficais");
+        jLabel33.setText("Nota Fiscal");
         jLabel33.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel33.setOpaque(true);
         add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 55, 120, 30));
 
-        rSButtonMetro6.setBackground(new java.awt.Color(255, 255, 255));
-        rSButtonMetro6.setForeground(new java.awt.Color(255, 0, 0));
-        rSButtonMetro6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Nota Fiscal.png"))); // NOI18N
-        rSButtonMetro6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rSButtonMetro6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        rSButtonMetro6.addActionListener(new java.awt.event.ActionListener() {
+        btNotaFiscal.setBackground(new java.awt.Color(255, 255, 255));
+        btNotaFiscal.setForeground(new java.awt.Color(255, 0, 0));
+        btNotaFiscal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Botoes/Submenus/Nota Fiscal.png"))); // NOI18N
+        btNotaFiscal.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btNotaFiscal.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btNotaFiscal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSButtonMetro6ActionPerformed(evt);
+                btNotaFiscalActionPerformed(evt);
             }
         });
-        add(rSButtonMetro6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 87, 120, 120));
+        add(btNotaFiscal, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 87, 120, 120));
 
         jLabel34.setBackground(new java.awt.Color(153, 153, 153));
         jLabel34.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
@@ -229,18 +229,20 @@ public class pnlFiscal extends javax.swing.JPanel {
         add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 208, 120, 20));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void rSButtonMetro6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonMetro6ActionPerformed
+    private void btNotaFiscalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNotaFiscalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_rSButtonMetro6ActionPerformed
+    }//GEN-LAST:event_btNotaFiscalActionPerformed
 
-    private void rSButtonMetro5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonMetro5ActionPerformed
+    private void btTributosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btTributosActionPerformed
        
         frmTributos frmTrib = new frmTributos(null, true, null);
         frmTrib.setVisible(true);
-    }//GEN-LAST:event_rSButtonMetro5ActionPerformed
+    }//GEN-LAST:event_btTributosActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private rojerusan.RSButtonMetro btNotaFiscal;
+    private rojerusan.RSButtonMetro btTributos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel32;
@@ -257,8 +259,6 @@ public class pnlFiscal extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private rojerusan.RSButtonMetro rSButtonMetro10;
-    private rojerusan.RSButtonMetro rSButtonMetro5;
-    private rojerusan.RSButtonMetro rSButtonMetro6;
     private rojerusan.RSButtonMetro rSButtonMetro7;
     private rojerusan.RSButtonMetro rSButtonMetro8;
     private rojerusan.RSButtonMetro rSButtonMetro9;
